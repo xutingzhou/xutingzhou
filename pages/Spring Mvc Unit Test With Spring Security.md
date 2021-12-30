@@ -36,3 +36,14 @@
 	  ```
 - 问题汇总
 	- java.lang.IllegalStateException: Failed to load ApplicationContext
+		- ```java
+		  @WebMvcTest(AuthController.class)
+		  @AutoConfigureMockMvc
+		  @ContextConfiguration(classes = {AuthController.class}) //required
+		  class AuthControllerTest {
+		      ...
+		  }
+		  ```
+	- Response Status 403
+		- ```java
+		  ```
