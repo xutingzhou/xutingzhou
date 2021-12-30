@@ -44,6 +44,30 @@
 		      ...
 		  }
 		  ```
-	- Response Status 403
+	- Response Status 403，跨域问题
 		- ```java
+		  ...
+		  import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+		  ...
+		  
+		    mockMvc.perform(
+		                  post("/api/{version}/auth/login", "v1")
+		                      .with(csrf()) //required
+		                      .contentType(MediaType.APPLICATION_JSON)
+		                      .accept(MediaType.APPLICATION_JSON)
+		                      .content(objectMapper.writeValueAsString(
+		                              new PasswordLogin().setPassword(faker.random().hex(8)).setUsername(faker.random().hex(8))
+		                      ))
+		                  )
+		                  .andDo(print())
+		                  .andExpect(status().isOk())
+		                  .andExpect(jsonPath("$.code", is(200)));
+		  ```
+	- Response Status 401 Unauthorized
+		- ```java
+		  @Test
+		  @WithMockUser //required
+		  void loginPassword() throws Exception {
+		      ...
+		  }
 		  ```
