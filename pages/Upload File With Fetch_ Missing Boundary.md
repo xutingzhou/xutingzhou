@@ -1,4 +1,4 @@
 - 问题
 	- 使用Fetch上传图片时报错Error: no multipart boundary was found
 - 解决
-	-
+	- 删除指定的Content-Type，浏览器会
