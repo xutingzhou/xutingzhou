@@ -1,18 +1,18 @@
 - 问题汇总
 	- Web
-		- [[Upload File With Fetch: Missing Boundary]]
+		- [[Upload File With Fetch: Missing Boundary]]#JavaScript #TypeScript
 	- Java
-		- [[Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session]]
+		- [[Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session]] #Java #Jpa
 - 笔记
 	- Java
-		- [[Spring Mvc Unit Test With Spring Security]]
-		- [[Copy a List to Another List in Java]]
-		- [[Config Spring Boot Multi Module With Jpa]]
-		- [[Spring Data Jpa - Projections]]
+		- [[Spring Mvc Unit Test With Spring Security]] #Java
+		- [[Copy a List to Another List in Java]] #Java
+		- [[Config Spring Boot Multi Module With Jpa]] #Java #Jpa
+		- [[Spring Data Jpa - Projections]] #Java #Jpa
 	- React
-		- [[在TypeScript中使用Redux Hooks]]
+		- [[在TypeScript中使用Redux Hooks]] #React #TypeScript
 	- Deno
-		- [[Deploy Deno Project with Docker]]
+		- [[Deploy Deno Project with Docker]] #Deno
 	- 其他
 		- [[异常处理的最佳实践]]
 	- 指南
