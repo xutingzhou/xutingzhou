@@ -18,3 +18,4 @@
 	- 指南
 		- [[在Windows上安装MediaPipe]]
 		- [[Use Qr Code to Display Wifi Password]]
+		- [[Google的SRE自我评分卡]]
