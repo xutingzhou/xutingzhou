@@ -15,6 +15,7 @@
 		- [[Deploy Deno Project with Docker]] #Deno
 	- 其他
 		- [[异常处理的最佳实践]]
+		- [[something]]
 	- 指南
 		- [[在Windows上安装MediaPipe]]
 		- [[Use Qr Code to Display Wifi Password]]
