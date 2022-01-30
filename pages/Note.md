@@ -1,21 +1,2 @@
-- 问题汇总
-	- Web
-		- [[Upload File With Fetch: Missing Boundary]]#JavaScript #TypeScript
-	- Java
-		- [[Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session]] #Java #Jpa
-- 笔记
-	- Java
-		- [[Spring Mvc Unit Test With Spring Security]] #Java
-		- [[Copy a List to Another List in Java]] #Java
-		- [[Config Spring Boot Multi Module With Jpa]] #Java #Jpa
-		- [[Spring Data Jpa - Projections]] #Java #Jpa
-	- React
-		- [[在TypeScript中使用Redux Hooks]] #React #TypeScript
-	- Deno
-		- [[Deploy Deno Project with Docker]] #Deno
-	- 其他
-		- [[异常处理的最佳实践]]
-	- 指南
-		- [[在Windows上安装MediaPipe]]
-		- [[Use Qr Code to Display Wifi Password]]
-		- [[Google的SRE自我评分卡]]
+- [[问题汇总]]
+- [[笔记]]
