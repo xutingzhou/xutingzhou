@@ -1,3 +1,6 @@
+type:: [[Note]]
+category:: [[Java]], [[Spring Boot]], [[Jpa]],
+
 - Config in SpringBootApplication. Set the scanning base packages. 
   ```java
   //find all repositories extending JpaRepository in the packages

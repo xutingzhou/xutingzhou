@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[React]], [[TypeScript]], [[Redux]],
+
 - Setting up the store, actions and reducers 
   ```Typescript
   # actions, reducers and dispatcher

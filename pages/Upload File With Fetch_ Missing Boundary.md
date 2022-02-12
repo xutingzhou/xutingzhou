@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Web]], [[JavaScript]], [[TypeScript]],
+
 - 问题
 	- 使用Fetch上传图片时报错Error: no multipart boundary was found
 - 解决

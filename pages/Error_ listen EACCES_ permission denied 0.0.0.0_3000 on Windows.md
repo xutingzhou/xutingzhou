@@ -1,4 +1,5 @@
-title:: Error: listen EACCES: permission denied 0.0.0.0:3000 on Windows
+type:: [[Note]],
+category:: [[Next.js]],
 
 - Error Info
   ```

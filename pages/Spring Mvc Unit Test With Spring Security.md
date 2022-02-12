@@ -1,6 +1,8 @@
+type:: [[Note]] ,
+category:: [[Java]], [[Spring Mvc]], [[Unit Test]], [[Spring Security]],
+
 - 例子
-	- ```Java
-	  @WebMvcTest(AuthController.class)
+	- @WebMvcTest(AuthController.class)
 	  @AutoConfigureMockMvc
 	  @ContextConfiguration(classes = {AuthController.class})
 	  class AuthControllerTest {
@@ -33,7 +35,6 @@
 	                  .andExpect(jsonPath("$.code", is(200)));
 	      }
 	  }
-	  ```
 - 问题汇总
 	- java.lang.IllegalStateException: Failed to load ApplicationContext
 		- ```java

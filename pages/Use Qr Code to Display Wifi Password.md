@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Manual]], [[Qr Code]],
+
 - Why
 	- Often forget the password
 	- Use a long random password to enhance security

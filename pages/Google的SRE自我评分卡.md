@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Manual]], [[Google]],
+
 - 评分
 	- level 1
 		- 0 – 对于相关的技术领域还不熟悉

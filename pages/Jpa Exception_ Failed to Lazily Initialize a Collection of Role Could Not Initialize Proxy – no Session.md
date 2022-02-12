@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Java]], [[Jpa]],
+
 - **When and why dose the exception happen**
 	- when two entities are in association mapping with fetch = FetchType.LAZY (for eg. OneToMany relationship) and we try to get child entity from the parent entity after session gets closed.
 - **How to fix the exception**

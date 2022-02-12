@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Java]], [[Jpa]], [[Spring]],
+
 - Interface-based Projections
 	- Entity
 	  ```java

@@ -1,3 +1,6 @@
+type:: [[Note]],
+category:: [[Deno]], [[Docker]],
+
 - Create Dockerfile 
   [denoland/deno](https://hub.docker.com/r/denoland/deno)
   ```dockerfile

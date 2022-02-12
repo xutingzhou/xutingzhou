@@ -1,3 +1,6 @@
+type:: [[Note]]
+category:: [[Java]]
+
 - Constructor
 	- ```java
 	  List<T> copy = new ArrayList<>(list);
