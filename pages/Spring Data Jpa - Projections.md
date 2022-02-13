@@ -1,5 +1,7 @@
 type:: [[Note]],
-category:: [[Java]], [[Jpa]], [[Spring]],
+category:: [[Backend]],
+tag:: [[Jpa]],
+language:: [[Java]],
 
 - Interface-based Projections
 	- Entity

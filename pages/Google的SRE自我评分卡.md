@@ -1,5 +1,6 @@
 type:: [[Note]],
-category:: [[Manual]], [[Google]],
+category:: [[Manual]],
+tag:: [[Google]],
 
 - 评分
 	- level 1

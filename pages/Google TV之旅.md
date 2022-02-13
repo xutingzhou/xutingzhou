@@ -1,5 +1,6 @@
 type:: [[Note]],
-category:: [[Manual]], [[Google]],
+category:: [[Manual]],
+tag:: [[Google]], [[device]]
 
 - 准备
 	- Google TV

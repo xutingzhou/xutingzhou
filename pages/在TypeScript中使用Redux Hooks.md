@@ -1,5 +1,7 @@
 type:: [[Note]],
-category:: [[React]], [[TypeScript]], [[Redux]],
+category:: [[Web]]，
+tag:: [[React]], [[Redux]],
+language:: [[TypeScript]],
 
 - Setting up the store, actions and reducers 
   ```Typescript

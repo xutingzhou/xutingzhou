@@ -1,5 +1,6 @@
 type:: [[Note]],
-category:: [[Next.js]],
+category:: [[Web]],
+tag:: [[Next.js]], [[Error]],
 
 - Error Info
   ```

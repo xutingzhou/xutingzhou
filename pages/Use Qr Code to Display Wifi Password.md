@@ -1,5 +1,6 @@
 type:: [[Note]],
-category:: [[Manual]], [[Qr Code]],
+category:: [[Manual]],
+tag:: [[Qr Code]],
 
 - Why
 	- Often forget the password
