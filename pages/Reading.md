@@ -1,7 +1,2 @@
-- 数学
-	- [[简单线性代数]]
-- Computer Science
-	- [[深入理解计算机系统]]
-- 历史
-- Flutter
-	- [[Flutter Complete Reference]]
+- {{query (page-property type Reading)}}
+  query-properties:: [:page :category]
