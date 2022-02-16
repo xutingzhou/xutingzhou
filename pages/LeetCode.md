@@ -1,1 +1,2 @@
-- [[两数之和]] #easy
+- {{query (page-property type LeetCode)}}
+  query-properties:: [:page :tag]
