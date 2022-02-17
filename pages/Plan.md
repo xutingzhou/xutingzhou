@@ -1,2 +1,3 @@
-- 年度计划
-	- [[2022年度计划]]
+- {{query (page-property type Plan)}}
+  query-table:: true
+  query-properties:: [:page :range]
