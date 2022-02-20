@@ -1,3 +1,4 @@
 alias:: 项目,
 
-- [[团当家]]
+- {{query (and  (page-property type Project) (todo later))}}
+-
