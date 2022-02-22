@@ -1,6 +1,5 @@
-type:: [[Note]]
-category:: [[Java]]
-
+- >[Copy a List to Another List in Java](https://www.baeldung.com/java-copy-list-to-another)
+-
 - Constructor
 	- ```java
 	  List<T> copy = new ArrayList<>(list);
@@ -24,4 +23,3 @@ category:: [[Java]]
 	- ```java
 	  List<T> copy = List.copyOf(list);
 	  ```
-- >[Copy a List to Another List in Java](https://www.baeldung.com/java-copy-list-to-another)

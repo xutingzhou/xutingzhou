@@ -1,4 +1,23 @@
-- [[Note]]
-- [[English]]
-- [[Reading]]
-- [[Plan]]
+- Areas
+	- [[Java]]
+	- [[React]]
+	- [[Flutter]]
+	- [[Linux]]
+	- [[Deno]]
+	- [[MediaPipe]]
+- Resources
+	- [Cookbook]([[cookbook]])
+	- [[Article]]
+	- [[Book]]
+	- [[Iteration]]
+	- [[Paper]]
+	- [[Product]]
+	- [[English]]
+	- [[Blog]]
+	- [[LeetCode]]
+- Archives
+	- [[Journals]]
+	- [Read]([[read]])
+	- [Question]([[question]])
+	- [Mindset]([[mindset]])
+	- [Life]([[life]])

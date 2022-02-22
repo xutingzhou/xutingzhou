@@ -1,3 +1,15 @@
 - https://reactjs.org/
 -
 - 用于构建用户界面的 JavaScript 库
+-
+- 目前使用
+	- IDE [[WebStorm]]
+	- [[TypeScript]]
+	- [[Redux]]
+	- [[Tailwind CSS]]
+-
+- 笔记
+	- [[在TypeScript中使用Redux Hooks]]
+-
+- 遇到的问题
+	- [[Upload File With Fetch_ Missing Boundary]]

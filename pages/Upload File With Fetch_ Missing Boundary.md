@@ -1,7 +1,4 @@
-type:: [[Note]],
-category:: [[Web]],
-tag:: [[Fetch]],
-language:: [[JavaScript]], [[TypeScript]],
+title:: Upload File With Fetch: Missing Boundary
 
 - 问题
 	- 使用Fetch上传图片时报错Error: no multipart boundary was found

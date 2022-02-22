@@ -1,5 +1,5 @@
-type:: [[Reading]],
-category:: [[React]],
+type:: [[Book]]
+category:: [[React]]
 
 - 函数式编程基本概念
 	- 不可变性

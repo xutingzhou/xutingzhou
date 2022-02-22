@@ -1,7 +1,3 @@
-type:: [[Note]],
-category:: [[Manual]],
-tag:: [[Google]], [[device]]
-
 - 准备
 	- Google TV
 	  第三代，淘宝买的

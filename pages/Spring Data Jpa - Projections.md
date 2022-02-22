@@ -1,8 +1,5 @@
-type:: [[Note]],
-category:: [[Backend]],
-tag:: [[Jpa]],
-language:: [[Java]],
-
+- >[Spring Data JPA - Interface-based Projections](https://www.logicbig.com/tutorials/spring-framework/spring-data/interface-based-projections.html)
+-
 - Interface-based Projections
 	- Entity
 	  ```java
@@ -330,4 +327,3 @@ language:: [[Java]],
 	    }
 	  }
 	  ```
-- >[Spring Data JPA - Interface-based Projections](https://www.logicbig.com/tutorials/spring-framework/spring-data/interface-based-projections.html)

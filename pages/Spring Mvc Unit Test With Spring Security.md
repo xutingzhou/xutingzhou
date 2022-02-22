@@ -1,8 +1,3 @@
-type:: [[Note]] ,
-category:: [[Backend]], 
-tag:: [[Spring Mvc]], [[Unit Test]], [[Spring Security]],
-language:: [[Java]],
-
 - 例子
 	- @WebMvcTest(AuthController.class)
 	  @AutoConfigureMockMvc
