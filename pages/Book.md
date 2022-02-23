@@ -1,2 +1,2 @@
 - {{{query (page-property type Book)}}}
-  query-properties:: [:page :category]
+  query-properties:: [:page :category :state]

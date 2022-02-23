@@ -10,7 +10,6 @@
 	- [[Article]]
 	- [[Book]]
 	- [[Iteration]]
-	- [[Paper]]
 	- [[Product]]
 	- [[English]]
 	- [[Blog]]

@@ -1,6 +1,7 @@
+type:: [[Product]]
+feature:: [[Library]]
+
 - https://reactjs.org/
--
-- 用于构建用户界面的 JavaScript 库
 -
 - 目前使用
 	- IDE [[WebStorm]]
