@@ -1,5 +1,3 @@
-public:: true
-
 - Areas
 	- [[Java]]
 	- [[React]]
