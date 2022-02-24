@@ -1,2 +1,0 @@
-type:: [[Reading]],
-category:: [[Flutter]],
