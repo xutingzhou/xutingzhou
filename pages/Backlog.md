@@ -1,0 +1,2 @@
+- {{{query (page-property state DOING )}}}
+- {{{query (todo LATER)}}}

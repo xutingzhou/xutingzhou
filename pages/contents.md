@@ -7,6 +7,7 @@
 	- 最近在减肥。希望可以坚持游泳。
 -
 - 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。若发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。
+- 正在将以期的资料迁移过来
 -
 - Areas
 	- [[Java]]
