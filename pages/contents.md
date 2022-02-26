@@ -2,9 +2,8 @@
 	- 工作上使用Java，Spring全家桶。用React和Tailwind CSS写界面。使用Flutter做APP和桌面应用。
 	- 玩乐高，最近买了EV3，顺便学习一下Python。
 	- 对游戏开发很感兴趣，刚开始学习Unity。
-	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认同。
+	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认可。
 	- 喜欢拍照，最近都没出去，设备都在吃灰。
-	- 最近在减肥。希望可以坚持游泳。
 -
 - 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。若发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。
 - 正在将以期的资料迁移过来
