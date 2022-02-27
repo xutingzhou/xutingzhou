@@ -1,3 +1,6 @@
+type:: [[Blog]]
+state:: DONE
+
 - Why
 	- Often forget the password
 	- Use a long random password to enhance security

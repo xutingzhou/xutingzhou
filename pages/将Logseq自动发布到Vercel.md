@@ -1,3 +1,6 @@
+type:: [[Blog]]
+state:: DONE
+
 - [[Logseq]] 自带的导出HTML功能，需要手动导出。搜索后找到了 [Logseg Publish Action](https://github.com/pengx17/logseq-publish)，原来官方文档也是用这个Action。学习参考了几个使用这个action的例子，最终实现了每次push后，自动发布到[[Vercel]]。
 -
 - 在 [[Vercel]]中随便用个模板建个项目，然后把git的连接断开就不会自动build了

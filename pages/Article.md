@@ -4,3 +4,4 @@
 - [Grokking the System Design Interview ](https://www.educative.io/courses/grokking-the-system-design-interview)
 - [A Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X/ref=sr_1_1?crid=2C9AORIXAFFZU&keywords=A+Philosophy+of+Software+Design&qid=1644155073&sprefix=%2Caps%2C845&sr=8-1)
 - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Beancount复式记账（一）：为什么](https://byvoid.com/zhs/blog/beancount-bookkeeping-1/)

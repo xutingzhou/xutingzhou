@@ -1,3 +1,6 @@
+type:: [[Blog]]
+state:: DONE
+
 - [官方指南](https://google.github.io/mediapipe/getting_started/install.html)
 - 按官方指南操作，注意的步骤
 	- 第三步 

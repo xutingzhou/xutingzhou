@@ -13,8 +13,6 @@
 	- [[React]]
 	- [[Flutter]]
 	- [[Linux]]
-	- [[Deno]]
-	- [[MediaPipe]]
 - Resources
 	- [Cookbook]([[cookbook]])
 	- [[Article]]
@@ -23,6 +21,7 @@
 	- [[Product]]
 	- [[English]]
 	- [[LeetCode]]
+	- [[Blog]]
 - Archives
 	- [[Journals]]
 	- [Read]([[read]])

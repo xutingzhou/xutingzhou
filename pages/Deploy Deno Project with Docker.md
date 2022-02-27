@@ -1,3 +1,6 @@
+type:: [[Blog]]
+state:: DONE
+
 - Create Dockerfile 
   [denoland/deno](https://hub.docker.com/r/denoland/deno)
   ```dockerfile
