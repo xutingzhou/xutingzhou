@@ -12,7 +12,7 @@ state:: reading
 	  把参数视为不可变数据
 	- `高阶函数`
 	  处理其他函数的函数，参数可以是函数，返回值也可以是函数
-- [柯里化Currying](https://zh.wikipedia.org/wiki/%E6%9F%AF%E9%87%8C%E5%8C%96)
+- [`柯里化Currying`](https://zh.wikipedia.org/wiki/%E6%9F%AF%E9%87%8C%E5%8C%96)
   把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
 - `ref`是一个对象，存储着一个组件整个生命周期的值
 - 受控组件中，值由React管理，而非DOM
