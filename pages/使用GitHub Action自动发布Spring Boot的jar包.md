@@ -23,7 +23,8 @@
       }
       publications {
           gpr(MavenPublication) {
-              artifact bootJar //Spring Boot的jar
+              artifact bootJar //Spring Boot的可执行jar
+            //  artifact jar  //Spring Boot的依赖jar，在
           }
       }
   }
