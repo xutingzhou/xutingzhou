@@ -1,3 +1,4 @@
+- Spring Boot的可以执行jar包叫bootJar，用于依赖的Plain jar叫jar
 - 在项目设置中添加两个Actions secrets
 	- USERNAME：GitHub用户名
 	- GITHUB_TOKEN：GitHub的token，有读写删packages的权限
@@ -9,6 +10,16 @@
   }
   
   ...
+  
+  bootJar {
+      enabled = false
+      archiveClassifier = 'boot'
+  }
+  
+  jar {
+      enabled = true
+      archiveClassifier = ''
+  }
   
   publishing {
       repositories {
@@ -23,8 +34,8 @@
       }
       publications {
           gpr(MavenPublication) {
-              artifact bootJar //Spring Boot的可执行jar
-            //  artifact jar  //Spring Boot的用于依赖jar
+              artifact jar  //Spring Boot的用于依赖jar
+            //artifact bootJar //Spring Boot的可执行jar
           }
       }
   }
@@ -69,6 +80,15 @@
   Error: Gradle script '/home/runner/work/gradle-lib-demo/gradle-lib-demo/gradlew' is not executable.
   ```
   #+END_TIP
+- #+BEGIN_TIP
+  默认打包用于依赖的jar的命名会添加plain，需要将命名中的plain去掉，才能在引用依赖的时候正确下载jar包
+  ```gradle
+  jar {
+      archiveClassifier = ''
+  }
+  ```
+  #+END_TIP
 - 参考资源
 	- [Publishing Java packages with Gradle](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle#publishing-packages-to-github-packages)
 	- [Gradle Build Action](https://github.com/marketplace/actions/gradle-build-action)
+	- [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/)
