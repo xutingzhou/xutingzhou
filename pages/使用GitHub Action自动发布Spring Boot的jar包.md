@@ -24,7 +24,7 @@
       publications {
           gpr(MavenPublication) {
               artifact bootJar //Spring Boot的可执行jar
-            //  artifact jar  //Spring Boot的依赖jar，在
+            //  artifact jar  //Spring Boot的用于依赖jar
           }
       }
   }
@@ -71,4 +71,4 @@
   #+END_TIP
 - 参考资源
 	- [Publishing Java packages with Gradle](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle#publishing-packages-to-github-packages)
-	- [Gradle Build Action]
+	- [Gradle Build Action](https://github.com/marketplace/actions/gradle-build-action)
