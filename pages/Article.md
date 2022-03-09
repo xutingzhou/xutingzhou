@@ -10,5 +10,4 @@
 - [开源软件指南](https://opensource.guide/zh-hans/)
 - [Understanding Kafka with Factorio](https://ruurtjan.medium.com/understanding-kafka-with-factorio-74e8fc9bf181)
 - [How to Improve Elasticsearch Performance by 20x for Multitenant, Real-Time Architectures](https://www.catonetworks.com/blog/how-to-improve-elasticsearch-performance-by-20x-for-multitenant-real-time-architectures/)
-- [Meet the Raspberry Pi Build HAT: create with Raspberry Pi and LEGO® Education](https://www.raspberrypi.com/news/raspberry-pi-build-hat-lego-education/)
 - [On YouTube’s recommendation system](https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/)
