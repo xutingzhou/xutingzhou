@@ -1,0 +1,2 @@
+type:: [[Product]]
+feature:: [[Language]]

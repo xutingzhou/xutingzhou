@@ -1,3 +1,6 @@
+type:: [[Product]]
+feature:: [[Language]]
+
 - https://www.java.com/
 -
 - 目前使用
