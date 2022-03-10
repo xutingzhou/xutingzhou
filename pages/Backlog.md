@@ -1,2 +1,5 @@
-- {{{query (page-property state DOING )}}}
-- {{{query (todo LATER)}}}
+- {{query (page-property state DOING )}}
+-
+- {{query (todo LATER)}}
+-
+- {{query (todo NOW)}}

@@ -7,7 +7,7 @@
 	- 喜欢拍照，最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
 -
 - 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。讨论问题，请在 [Discussions](https://github.com/xutingzhou/xutingzhou/discussions) 讨论。
-- 正在将以期的资料迁移过来。
+- 正在将以前的资料迁移过来。
 -
 - Areas
 	- [[Java]]
@@ -22,10 +22,10 @@
 	- [[Product]]
 	- [[English]]
 	- [[LeetCode]]
-	- [[Blog]]
 - Archives
 	- [[Journals]]
 	- [Read]([[read]])
 	- [Question]([[question]])
 	- [Mindset]([[mindset]])
+	- [Tips]([[tips]])
 	- [Life]([[life]])

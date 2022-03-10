@@ -1,7 +1,5 @@
 title:: Iteration/1 周记
 
-- type:: [[Blog]]
-  state:: DONE
 - 学习使用 [[Logseq]]，主要看[文档](https://logseq.github.io/#/page/Contents)和[漩涡的note](https://note.xuanwo.io/#/page/Contents)
 - 学习了关于多租户SaaS的数据库架构
 - 修复了一些App的bug， [[Flutter]] 还是要多用多思考，开始学习bloc

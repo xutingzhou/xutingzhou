@@ -1,8 +1,6 @@
-type:: [[Blog]]
-state:: DONE
-
+- 在 [[Docker]] 上部署 [[Deno]] 项目
 - Create Dockerfile 
-  [denoland/deno](https://hub.docker.com/r/denoland/deno)
+  use [denoland/deno](https://hub.docker.com/r/denoland/deno)
   ```dockerfile
   FROM denoland/deno:1.11.5
   
