@@ -1,12 +1,13 @@
 - Hi，我是许汀洲。
 	- 工作上使用 [[Java]]，Spring全家桶。用 [[React]] 和 [[Tailwind CSS]] 写界面。使用 [[Flutter]] 做APP和桌面应用。
+	- 使用 [[Logseq]] 记录，构建知识库。
 	- 玩乐高，最近买了 [[Lego]] EV3，顺便学习一下 [[Python]]。
 	- 对游戏开发很感兴趣，刚开始学习 [[Unity]]。
 	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认可。[我的菜谱]([[cookbook]])。
-	- 喜欢拍照，最近都没出去，设备都在吃灰。
+	- 喜欢拍照，最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
 -
-- 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。若发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。
-- 正在将以期的资料迁移过来
+- 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。讨论问题，请在 [Discussions](https://github.com/xutingzhou/xutingzhou/discussions) 讨论。
+- 正在将以期的资料迁移过来。
 -
 - Areas
 	- [[Java]]

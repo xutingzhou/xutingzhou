@@ -16,9 +16,9 @@
 - bloc核心思想
 	- 流（Streams)是一系列异步的数据.
 		- [Dart官方文档](https://dart.dev/tutorials/language/streams)
-	- [Cubit](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=cubit)
+	- [`Cubit`](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=cubit)
 	  ![image.png](../assets/image_1646828667262_0.png)
-	- [Bloc](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=bloc)
+	- [`Bloc`](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=bloc)
 	  ![image.png](../assets/image_1646828693191_0.png)
 	- Cubit vs. Bloc
 		- Cubit 的优势
@@ -31,7 +31,7 @@
 			- `高级的事件转换`
 				- 需要利用反应性运算符，例如：buffer, debounceTime, throttle 等。
 		- #+BEGIN_TIP
-		  如果仍然不确定要使用哪种，请从 Cubit 开始，然后可以根据需要将其重构或放大为 Bloc。
+		  如果仍然不确定要使用哪种，请从 `Cubit` 开始，然后可以根据需要将其重构或放大为 `Bloc`。
 		  #+END_TIP
 -
 - Flutter Bloc的核心理念
@@ -58,3 +58,33 @@
 			- `BlocProvider`用于提供bloc，而`RepositoryProvider`仅用于存储库。
 		- `MultiRepositoryProvider`
 			- 将多个`RepositoryProvider`部件(widgets)合并为一个。
+-
+- 架构
+	- `数据层（Data Layer)`
+		- 数据层的责任是从一个或多个数据源或库中检索/处理数据。
+		- 是应用程序的最低层，并且与数据库，网络请求和其他异步数据源进行交互。
+		- `数据提供者（Data Provider)`
+			- 数据提供者的责任是提供原始数据。数据提供者所提供的数据应该是能在各个语言间通用。
+		- `数据源/库（Repository)`
+			- 存储库层是与Bloc层进行通信的一个或多个数据提供程序的包装。可以与多个数据提供者进行交互，并对数据执行转换，然后再将结果传递给业务逻辑层。
+	- `Bloc 业务逻辑层 (Business Logic Layer)`
+		- Bloc层的职责是以新状态（State) 响应表示层(Presentation)的事件(Event)。Bloc层可以依赖一个或多个存储库来检索建立应用程序状态(State)所需的数据。
+		- Bloc和Bloc之间的交流
+			- 每个bloc都有一个状态流（Stream)，其他bloc可以订阅该状态流，以便对bloc内部的变化做出反应。
+	- `表现层（Presentation Layer) UI`
+		- 表现层的职责是弄清楚如何基于一个或多个bloc的状态（State) 进行渲染。另外，它应该处理用户输入和应用程序生命周期事件。
+-
+- 命名惯例
+	- 事件（Event)
+		- 事件应以过去时来命名，因为从bloc的角度来看，事件是已经发生的事情
+	- 命名状态（State)
+		- 状态应该是名词，因为状态只是特定时间点的快照。
+-
+- 项目结构参考案例
+	- 快速建包结构
+	  ```bash
+	  flutter create --template=package package_name
+	  ```
+	- [brianegan/flutter_architecture_samples](https://github.com/brianegan/flutter_architecture_samples/tree/master/bloc_library)
+	- [flutter_shopping_cart](https://github.com/felangel/bloc/tree/master/examples/flutter_shopping_cart)
+	- [TDD Clean Architecture for Flutter](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course)
