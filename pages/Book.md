@@ -2,3 +2,4 @@
   query-properties:: [:page :category :state]
 -
 - {{query (and (page-property type Book) (page-property state done))}}
+  query-properties:: [:page :category :state]

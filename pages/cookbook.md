@@ -8,6 +8,6 @@ alias:: 菜谱
 	- 下厨房app
 -
 - {{query (page-property type cookbook)}}
-  query-sort-by:: category
-  query-sort-desc:: false
+  query-sort-by:: ingredient
+  query-sort-desc:: true
   query-properties:: [:page :ingredient :cooking :category]

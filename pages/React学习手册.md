@@ -1,6 +1,6 @@
 type:: [[Book]]
 category:: [[React]]
-state:: reading
+state:: done
 
 - `函数式编程`基本概念
 	- `不可变性`

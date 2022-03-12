@@ -6,26 +6,29 @@
 	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认可。[我的菜谱]([[cookbook]])。
 	- 喜欢拍照，最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
 -
-- 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎Star。发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。讨论问题，请在 [Discussions](https://github.com/xutingzhou/xutingzhou/discussions) 讨论。
-- 正在将以前的资料迁移过来。
+- 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎 Star。发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。讨论问题，请在 [Discussions](https://github.com/xutingzhou/xutingzhou/discussions) 讨论。
+- 可以使用 `Ctrl + K` 来搜索关键词
 -
 - Areas
-	- [[Java]]
-	- [[React]]
 	- [[Flutter]]
+	- [[Java]]
 	- [[Linux]]
+	- [[React]]
 - Resources
-	- [Cookbook]([[cookbook]])
 	- [[Article]]
 	- [[Book]]
-	- [[Iteration]]
-	- [[Product]]
+	- [Cookbook]([[cookbook]])
 	- [[English]]
+	- [[Iteration]]
 	- [[LeetCode]]
+	- [[Product]]
+	- [[Video]]
 - Archives
 	- [[Journals]]
-	- [Read]([[read]])
-	- [Question]([[question]])
-	- [Mindset]([[mindset]])
-	- [Tips]([[tips]])
 	- [Life]([[life]])
+	- [Question]([[question]])
+	- [Quote]([[quote]])
+	- [Read]([[read]])
+	- [Tips]([[tips]])
+	- [Watch]([[watch]])
+	-
