@@ -1,0 +1,1 @@
+- Icon 需要去掉alpha图层的png
