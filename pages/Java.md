@@ -3,7 +3,7 @@ feature:: [[Language]]
 
 - https://www.java.com/
 -
-- 目前使用
+- 使用
 	- IDE [[IntelliJ IDEA]]
 	- JDK [Adoptium](https://adoptium.net/)
 	- [[Spring Boot]]
