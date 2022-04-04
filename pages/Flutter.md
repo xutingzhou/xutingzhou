@@ -13,8 +13,9 @@ feature:: [[Framework]]
 	- [[Dart的构造函数]]
 	- [[解决http包返回中文乱码问题]]
 -
-- Favorite Packages
+- Packages
 	- [equatable](https://pub.dev/packages/equatable)
 	- [flutter_bloc](https://pub.dev/packages/flutter_bloc)
 	- [bloc_concurrency](https://pub.dev/packages/bloc_concurrency)
 	- [http](https://pub.dev/packages/http)
+	- [formz](https://pub.dev/packages/formz)
