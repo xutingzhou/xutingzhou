@@ -39,10 +39,11 @@
 		- `BlocBuilder`
 			- 在接收到新的状态(State)时处理构建部件
 		- `BlocSelector`
-			- 和 `BlocBuilder` 类似的组件，但它可以选择一个基于当前bloc状态的新值来过滤更新。如果所选值不更改，则会阻止不必要的构建。
+			- 和 `BlocBuilder` 类似的组件，可以选择一个基于当前bloc状态的新值来过滤更新。如果所选值不更改，则会阻止不必要的构建。
 		- `BlocProvider`
-			- 可通过`BlocProvider.of <T>（context)`向其子级提供bloc。
-			- 在大多数情况下，应该使用`BlocProvider`来创建新的blocs，并将其提供给其余子树。
+			- 可通过`BlocProvider.of<T>(context)`向其子级提供bloc。
+			- 使用`BlocProvider`来创建新的blocs，提供给子树。
+			- `BlocProvider` 默认在需要的时候创建bloc。lazy 设置为 false，强制立即创建。
 		- `MultiBlocProvider`
 			- 将多个`BlocProvider`部件合并为一个。
 		- `BlocListener`

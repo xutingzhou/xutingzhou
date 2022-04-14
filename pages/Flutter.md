@@ -19,3 +19,4 @@ feature:: [[Framework]]
 	- [bloc_concurrency](https://pub.dev/packages/bloc_concurrency)
 	- [http](https://pub.dev/packages/http)
 	- [formz](https://pub.dev/packages/formz)
+	- [fluent_ui](https://pub.dev/packages/fluent_ui)
