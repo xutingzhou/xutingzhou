@@ -148,6 +148,9 @@
  {:block/name "2022/04/14",
   :block/created-at 1649897798278,
   :block/updated-at 1649898142934}
+ {:block/name "2022/04/15",
+  :block/created-at 1650027543708,
+  :block/updated-at 1650027543708}
  {:block/name "[[https_",
   :block/created-at 1649421665084,
   :block/updated-at 1649421665084}
@@ -312,7 +315,7 @@
   :block/updated-at 1649421165860}
  {:block/name "java",
   :block/created-at 1645017801234,
-  :block/updated-at 1648955350286}
+  :block/updated-at 1650035293958}
  {:block/name "journals",
   :block/created-at 1645486482397,
   :block/updated-at 1645486525511}
@@ -320,6 +323,12 @@
   "jpa exception_ failed to lazily initialize a collection of role could not initialize proxy – no session",
   :block/created-at 1640917535547,
   :block/updated-at 1645487465860}
+ {:block/name "kotlin",
+  :block/created-at 1649945703109,
+  :block/updated-at 1650028971250}
+ {:block/name "kotlin basics",
+  :block/created-at 1650028971250,
+  :block/updated-at 1650035188635}
  {:block/name "language",
   :block/created-at 1646840194108,
   :block/updated-at 1646840194108}
@@ -367,7 +376,7 @@
   :block/updated-at 1645488216573}
  {:block/name "python",
   :block/created-at 1646839973852,
-  :block/updated-at 1646840267499}
+  :block/updated-at 1649945970661}
  {:block/name "question",
   :block/created-at 1645490869728,
   :block/updated-at 1645490869728}
