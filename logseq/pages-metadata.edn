@@ -151,6 +151,9 @@
  {:block/name "2022/04/15",
   :block/created-at 1650027543708,
   :block/updated-at 1650027543708}
+ {:block/name "2022/04/16",
+  :block/created-at 1650072739526,
+  :block/updated-at 1650104206250}
  {:block/name "[[https_",
   :block/created-at 1649421665084,
   :block/updated-at 1649421665084}
@@ -328,7 +331,7 @@
   :block/updated-at 1650028971250}
  {:block/name "kotlin basics",
   :block/created-at 1650028971250,
-  :block/updated-at 1650035188635}
+  :block/updated-at 1650103803844}
  {:block/name "language",
   :block/created-at 1646840194108,
   :block/updated-at 1646840194108}
