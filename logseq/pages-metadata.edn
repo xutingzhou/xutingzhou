@@ -330,7 +330,7 @@
   :block/updated-at 1649421165860}
  {:block/name "java",
   :block/created-at 1645017801234,
-  :block/updated-at 1650035293958}
+  :block/updated-at 1650414926543}
  {:block/name "journals",
   :block/created-at 1645486482397,
   :block/updated-at 1645486525511}
@@ -340,13 +340,13 @@
   :block/updated-at 1645487465860}
  {:block/name "kotlin",
   :block/created-at 1649945703109,
-  :block/updated-at 1650203413054}
+  :block/updated-at 1650414984046}
  {:block/name "kotlin basics",
   :block/created-at 1650028971250,
   :block/updated-at 1650103803844}
  {:block/name "kotlin实战",
   :block/created-at 1650203413054,
-  :block/updated-at 1650375388800}
+  :block/updated-at 1650461652167}
  {:block/name "language",
   :block/created-at 1646840194108,
   :block/updated-at 1646840194108}

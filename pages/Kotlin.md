@@ -6,6 +6,9 @@ feature:: [[Language]]
 - Why Kotlin
 	- Modern, concise and safe programming language
 -
+- 关注
+	- [Arrow](https://arrow-kt.io/)
+-
 - 笔记
 	- [[Kotlin Basics]]
 	- [[Kotlin实战]]

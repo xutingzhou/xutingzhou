@@ -10,7 +10,8 @@ feature:: [[Language]]
 	- [[Spring Security]]
 	- [[Spring Data JPA]]
 -
-- [[Kotlin]]
+- 关注
+	- [[Kotlin]]
 -
 - 笔记
 	- [[Spring Data Jpa - Projections]]
