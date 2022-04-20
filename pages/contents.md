@@ -1,13 +1,19 @@
 - Hi，我是许汀洲。
-	- 工作上使用 [[Java]]，Spring全家桶。用 [[React]] 和 [[Tailwind CSS]] 写界面。使用 [[Flutter]] 做APP和桌面应用。
+	- 使用 [[Java]] / [[Kotlin]] 和 Spring全家桶。
+	- 使用 [[React]] 和 [[Tailwind CSS]] 做Web。
+	- 使用 [[Flutter]] 做 APP 和桌面应用。
 	- 使用 [[Logseq]] 记录，构建知识库。
-	- 玩乐高，最近买了 [[Lego]] EV3，顺便学习一下 [[Python]]。
+	- 玩乐高，喜欢[机械组](https://www.lego.com/zh-cn/themes/technic)，买了 [[Lego]] EV3。
 	- 对游戏开发很感兴趣，刚开始学习 [[Unity]]。
 	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认可。[我的菜谱]([[cookbook]])。
-	- 喜欢拍照，最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
+	- 喜欢拍照，Sony 用户。最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
 -
 - 本站的源代码 [xutingzhou/xutingzhou](https://github.com/xutingzhou/xutingzhou)，欢迎 Star。发现问题，请在 [Issues](https://github.com/xutingzhou/xutingzhou/issues) 反馈。讨论问题，请在 [Discussions](https://github.com/xutingzhou/xutingzhou/discussions) 讨论。
 - 可以使用 `Ctrl + K` 来搜索关键词
+-
+- #+BEGIN_QUOTE
+  “我的语言之局限，即我的世界之局限。” 一一 [Ludwig Wittgenstein](https://en.wikipedia.org/wiki/Ludwig_Wittgenstein)
+  #+END_QUOTE
 -
 - Areas
 	- [[Flutter]]
@@ -31,4 +37,3 @@
 	- [Read]([[read]])
 	- [Tips]([[tips]])
 	- [Watch]([[watch]])
-	-
