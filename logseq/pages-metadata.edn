@@ -168,7 +168,10 @@
   :block/updated-at 1650412560558}
  {:block/name "2022/04/21",
   :block/created-at 1650507043737,
-  :block/updated-at 1650507043737}
+  :block/updated-at 1650546352819}
+ {:block/name "2022/04/22",
+  :block/created-at 1650633196137,
+  :block/updated-at 1650633196137}
  {:block/name "[[https_",
   :block/created-at 1649421665084,
   :block/updated-at 1649421665084}
@@ -232,6 +235,9 @@
  {:block/name "card",
   :block/created-at 1645017801233,
   :block/updated-at 1645017801233}
+ {:block/name "clion",
+  :block/created-at 1650634174733,
+  :block/updated-at 1650634231292}
  {:block/name "computer science",
   :block/created-at 1645017801233,
   :block/updated-at 1645017801233}
@@ -425,6 +431,9 @@
  {:block/name "runtime",
   :block/created-at 1645490869728,
   :block/updated-at 1645490869728}
+ {:block/name "rust",
+  :block/created-at 1650633233970,
+  :block/updated-at 1650633314294}
  {:block/name "spring boot",
   :block/created-at 1645017801233,
   :block/updated-at 1646840175417}
@@ -521,9 +530,16 @@
  {:block/name "土豆培根卷",
   :block/created-at 1641305192610,
   :block/updated-at 1646914497656}
+ {:block/name "在clion中配置wsl toolchains",
+  :block/created-at 1650634231291,
+  :block/updated-at 1650634511033}
  {:block/name "在typescript中使用redux hooks",
   :block/created-at 1640916912448,
   :block/updated-at 1645488336357}
+ {:block/name
+  "在windows上使用clion调试报错：gnu debugger cannot be used with msvc rust toolchain",
+  :block/created-at 1650633314294,
+  :block/updated-at 1650633351349}
  {:block/name "在windows上安装mediapipe",
   :block/created-at 1640919191328,
   :block/updated-at 1646915133557}
