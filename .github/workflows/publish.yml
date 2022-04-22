@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Logseq Publish
-        uses: pengx17/logseq-publish@main
+        uses: pengx17/logseq-publish@v0.1
         with:
           dest: www
       - name: Deploy to vercel
