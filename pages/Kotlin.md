@@ -7,7 +7,7 @@ feature:: [[Language]]
 	- Modern, concise and safe programming language
 -
 - 关注
-	- [Arrow](https://arrow-kt.io/)
+	- [[Arrow]]
 -
 - 笔记
 	- [[Kotlin Basics]]
