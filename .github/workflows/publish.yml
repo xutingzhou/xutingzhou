@@ -14,6 +14,7 @@ jobs:
       - name: Logseq Publish
         uses: pengx17/logseq-publish@main
         with:
+          version: "@sha256:e6f98c923385fb8207abb3ce313f63cf3ff9c87d8a626cd8d00c322cb2eafe10"
           dest: www
       - name: Deploy to vercel
         env:
