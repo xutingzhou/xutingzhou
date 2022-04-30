@@ -12,5 +12,6 @@ feature:: [[Language]]
 - 笔记
 	- [[Kotlin Basics]]
 	- [[Kotlin实战]]
+	- [[Kotlin编程之美]]
 -
 - 问题
