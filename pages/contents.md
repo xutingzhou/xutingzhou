@@ -3,7 +3,7 @@
 	- 使用 [[React]] 和 [[Tailwind CSS]] 做Web。
 	- 使用 [[Flutter]] 做 APP 和桌面应用。
 	- 使用 [[Logseq]] 记录，构建知识库。
-	- 玩乐高，喜欢[机械组](https://www.lego.com/zh-cn/themes/technic)，买了 [[Lego]] EV3。
+	- 玩[乐高]([[Lego]])，喜欢[机械组](https://www.lego.com/zh-cn/themes/technic)，买了 EV3。
 	- 对游戏开发很感兴趣，刚开始学习 [[Unity]]。
 	- 喜欢做菜，水平还行。得到两位美食家（老婆和儿子）的认可。[我的菜谱]([[cookbook]])。
 	- 喜欢拍照，Sony 用户。最近都没出去，设备都在吃灰。[我的Instagram](https://www.instagram.com/xutingzhou_/)。
