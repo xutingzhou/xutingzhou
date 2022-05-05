@@ -1,5 +1,5 @@
 - Hi，我是许汀洲。
-	- 使用 [[Java]] / [[Kotlin]] 和 Spring全家桶。
+	- 使用 [[Java]] / [[Kotlin]] 和 [[Spring]] 全家桶。
 	- 使用 [[React]] 和 [[Tailwind CSS]] 做Web。
 	- 使用 [[Flutter]] 做 APP 和桌面应用。
 	- 使用 [[Logseq]] 记录，构建知识库。
