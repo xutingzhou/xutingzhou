@@ -168,7 +168,7 @@
  :favorites ["Backlog" "Contents" "Journals"]
  :default-home {:page "Contents"}
  :zotero/settings-v2 {"default" {:type-id "8915798", :zotero-data-directory ""}}
- :journal/page-title-format "yyyy/MM/dd"
+ :journal/page-title-format "MMM do, yyyy"
  :graph/settings {:journal? false}
  :publishing/all-pages-public? true
  :feature/enable-timetracking? false

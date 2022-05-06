@@ -17,7 +17,7 @@
 -
 - Areas
 	- [[Flutter]]
-	- [[Java]]
+	- [[Java]] / [[Kotlin]]
 	- [[Linux]]
 	- [[React]]
 - Resources
