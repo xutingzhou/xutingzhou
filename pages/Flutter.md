@@ -13,6 +13,7 @@ feature:: [[Framework]]
 	- [[Dart的构造函数]]
 	- [[解决http包返回中文乱码问题]]
 	- [[MacOS上HTTP请求错误: Operation not permitted]]
+	- [[IPhone真机运行异常：无法打开“iproxy”，因为无法验证开发者]]
 -
 - Packages
 	- [equatable](https://pub.dev/packages/equatable)
