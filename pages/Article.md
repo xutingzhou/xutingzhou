@@ -17,3 +17,4 @@
 - [Should you make an open API?](https://fairtiq.com/en-ch/tech/should-you-make-an-open-api)
 - [Aserto, the developer API for permissions and RBAC, is open to all!](https://www.aserto.com/blog/aserto-the-developer-api-for-permissions-and-rbac-is-open-to-all)
 - [Software Architecture Learning Path](https://deshpandetanmay.medium.com/software-architecture-learning-path-af57e733d036)
+- [GitLab Handbook](https://about.gitlab.com/handbook/)
