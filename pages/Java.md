@@ -19,6 +19,7 @@ feature:: [[Language]]
 	- [[Config Spring Boot Multi Module With Jpa]]
 	- [[Copy a List to Another List in Java]]
 	- [[使用GitHub Action自动发布Spring Boot的jar包]]
+	- [[Use Spring Doc instead of Spring Fox]]
 -
 - 遇到的问题
 	- [[Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session]]
