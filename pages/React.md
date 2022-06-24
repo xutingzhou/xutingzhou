@@ -12,6 +12,7 @@ feature:: [[Library]]
 - 笔记
 	- [[在TypeScript中使用Redux Hooks]]
 	- [[Redux Toolkit使用笔记]]
+	- [[React Datepicker 设置中文]]
 -
 - 遇到的问题
 	- [Upload File With Fetch: Missing Boundary]([[Upload File With Fetch_ Missing Boundary]])

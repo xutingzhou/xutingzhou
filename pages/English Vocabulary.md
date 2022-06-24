@@ -49,6 +49,7 @@ type:: [[English]]
 	- {{cloze A nervous feeling; unrest caused by worry}}
 	- {{cloze （情绪上的）紧张，烦躁}}
 - ### conclusion #card
+  collapsed:: true
 	- kənˈklo͞oZHən
 	- n.
 	- In most action movies, the **conclusion** is always the same - the hero beats the bad guy and wins the heart of the beautiful girl.
@@ -56,6 +57,7 @@ type:: [[English]]
 	- {{cloze Last part; The ending of something}}
 	- {{cloze 结局}}
 - ### humble #card
+  collapsed:: true
 	- ˈhəmbəl
 	- adj.
 	- Jack always brags about himself, but Kathy is **humble** even when she has reason to be proud.
@@ -63,6 +65,26 @@ type:: [[English]]
 	- {{cloze Not bragging; Not thinking too highly of oneself}}
 	- {{cloze 谦逊的}}
 - ### minor #card
+  collapsed:: true
 	- ˈmīnər
 	- adj.
-	-
+	- Although Tanya's car was badly damaged in the crash, Tanya had only **minor** cuts and bruises.
+	- The teacher must have liked my paper because she made only a few **minor** changes.
+	- {{cloze small; Not important}}
+	- {{cloze 次要的; 较小的}}
+- ## talent #card
+  collapsed:: true
+	- ˈtalənt
+	- n.
+	- Some lucky people are born with a **talent** for making friends easily.
+	- Lian was happy when her uncle told her she had a **talent** for singing.
+	- {{cloze A special skill, often one that someone is born with}}
+	- {{cloze 天赋}}
+- ## volunteer
+  collapsed:: true
+	- ˌvälənˈtir
+	- n.
+	- Mrs. Jackson has been a **volunteer** at the hospital for so many years that many people think she is a paid worker.
+	- My son's teacher sent a note home that said, "I need parent **volunteers** to help when we take trips away from school."
+	- {{cloze Someone who works or helps for no pay}}
+	- {{cloze 志愿者}}

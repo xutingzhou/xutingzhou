@@ -51,3 +51,36 @@
 				- ```TypeScript
 				  import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 				  ```
+	- [Customizing queries](https://redux-toolkit.js.org/rtk-query/usage/customizing-queries)
+		- 自己实现一个baseQuery就可以添加header，解析自定义返回值和异常处理
+			- ```typescript
+			  const myFetchBaseQuery: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError, {}, FetchBaseQueryMeta> = async (args, api, extraOptions) => {
+			      const result = await fetchBaseQuery({
+			          baseUrl: apiUrl,
+			          prepareHeaders: (headers, {getState}) => {
+			              const token = (getState() as RootState).auth.token;
+			              if (token) {
+			                  headers.set('authorization', `Bearer ${token}`);
+			              }
+			              return headers;
+			          },
+			      })(args, api, extraOptions);
+			      return new Promise<any>((resolve, reject) => {
+			          let response: Result<any>;
+			          const {error} = result;
+			          if (error) {
+			              response = (error.data) as Result<any>
+			          } else {
+			              response = (result.data) as unknown as Result<any>;
+			          }
+			          const {data, code, msg} = response;
+			          if (code >= 200 && code < 300) {
+			              result.data = data;
+			              resolve(result);
+			          } else {
+			              showError(msg ?? "");
+			              reject(msg);
+			          }
+			      });
+			  }
+			  ```
