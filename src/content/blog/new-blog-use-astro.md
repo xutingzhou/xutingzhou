@@ -1,16 +1,13 @@
 ---
-author: Sat Naing
-pubDatetime: 2022-09-23T15:22:00Z
-title: Adding new posts in AstroPaper theme
-postSlug: adding-new-posts-in-astropaper-theme
+pubDatetime: 2023-08-08T13:26:00+08:00
+title: 使用Astro搭建新的Blog
+postSlug: new-blog-use-astro
 featured: true
 draft: false
 tags:
-  - docs
-ogImage: ""
-description:
-  Some rules & recommendations for creating or adding new posts using AstroPaper
-  theme.
+  - blog
+  - astro
+description: 新的Blog使用Astro，从原来的Logseq迁移过来。
 ---
 
 Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
