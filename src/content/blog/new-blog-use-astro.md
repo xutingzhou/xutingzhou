@@ -1,5 +1,5 @@
 ---
-pubDatetime: 2023-08-08T13:26:00+08:00
+pubDatetime: 2023-08-08T13:26:00Z
 title: 使用Astro搭建新的Blog
 postSlug: new-blog-use-astro
 featured: true
