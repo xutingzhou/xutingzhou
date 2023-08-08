@@ -1,11 +1,11 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/",
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  website: "https://www.xutingzhou.me/",
+  author: "XuTingzhou",
+  desc: "Something about Xu",
+  title: "Xu's Blog",
+  ogImage: "logo.png",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
