@@ -10,7 +10,11 @@ tags:
 description: Config Spring Boot Multi Module With Jpa
 ---
 
-### 1. Config in SpringBootApplication. Set the scanning base packages. 
+## Table of contents
+
+## Steps
+
+### 1. Config in SpringBootApplication. Set the scanning base packages
 
 ```java
 //find all repositories extending JpaRepository in the packages
@@ -27,7 +31,7 @@ public class CoreApplication {
 }
 ```
 
-### 2. Config in gradle. When using the modules, Spring Boot will match urls for them. Check log in the console. 
+### 2. Config in gradle. When using the modules, Spring Boot will match urls for them. Check log in the console
 
 ```java
 dependencies {

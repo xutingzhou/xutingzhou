@@ -12,6 +12,8 @@ description: Spring Data Jpa - Projections
 
 >[Spring Data JPA - Interface-based Projections](https://www.logicbig.com/tutorials/spring-framework/spring-data/interface-based-projections.html)
 
+## Table of contents
+
 ## Interface-based Projections
 
 ### 1. Entity
