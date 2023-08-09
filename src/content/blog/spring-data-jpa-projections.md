@@ -2,11 +2,11 @@
 pubDatetime: 2023-08-09T09:09:00Z
 title: Spring Data Jpa - Projections
 postSlug: spring-data-jpa-projections
-featured: true
+featured: false
 draft: false
 tags:
-  - Spring
-  - Jpa
+  - spring
+  - jpa
 description: Spring Data Jpa - Projections
 ---
 
