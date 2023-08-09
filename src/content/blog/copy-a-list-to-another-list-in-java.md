@@ -9,6 +9,8 @@ tags:
 description: 在Java中复制List
 ---
 
+>[Copy a List to Another List in Java](https://www.baeldung.com/java-copy-list-to-another)
+
 ### 1. Constructor
 
 ```java
