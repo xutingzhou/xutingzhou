@@ -42,11 +42,11 @@ description: Flutter Bloc学习笔记
 
 ### [Cubit](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=cubit)
 
-![learn-flutter-bloc_0.png](../../assets/imgs/learn-flutter-bloc_0.png)
+![learn-flutter-bloc_0.png](https://github.com/xutingzhou/xutingzhou/blob/main/src/assets/imgs/learn-flutter-bloc_0.png)
 
 ### [Bloc](https://bloclibrary.dev/#/zh-cn/coreconcepts?id=bloc)
 
-![learn-flutter-bloc_1.png](../../assets/imgs/learn-flutter-bloc_1.png)
+![learn-flutter-bloc_1.png](https://github.com/xutingzhou/xutingzhou/blob/main/src/assets/imgs/learn-flutter-bloc_1.png)
 
 ### Cubit vs. Bloc
 

@@ -13,7 +13,7 @@ description: 一些遇到的问题和异常
 
 ## Table of contents
 
-## Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session
+## 1. Jpa Exception: Failed to Lazily Initialize a Collection of Role Could Not Initialize Proxy – no Session
 
 ### When and why dose the exception happen
 
@@ -28,7 +28,7 @@ when two entities are in association mapping with fetch = FetchType.LAZY (for eg
 
 >[Failed to lazily initialize a collection of role could not initialize proxy – no Session](https://www.netsurfingzone.com/hibernate/failed-to-lazily-initialize-a-collection-of-role-could-not-initialize-proxy-no-session/)
 
-## Spring Boot 多租户结构中，Hibernate ddl-auto 无法更新所有的schema
+## 2. Spring Boot 多租户结构中，Hibernate ddl-auto 无法更新所有的schema
 
 ### 问题描述
 
@@ -66,11 +66,11 @@ public class AutoDDLConfig {
             emfBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
             emfBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
             Map<String, Object> hibernateProps = new LinkedHashMap<>(jpaProperties.getProperties());
-        	hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5InnoDBDialect");
-        	hibernateProps.put(Environment.HBM2DDL_AUTO, "update");
-        	hibernateProps.put(Environment.PHYSICAL_NAMING_STRATEGY, "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
-        	hibernateProps.put(Environment.IMPLICIT_NAMING_STRATEGY, "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
-       		hibernateProps.put(Environment.ENABLE_LAZY_LOAD_NO_TRANS, true);
+            hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5InnoDBDialect");
+            hibernateProps.put(Environment.HBM2DDL_AUTO, "update");
+            hibernateProps.put(Environment.PHYSICAL_NAMING_STRATEGY, "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
+            hibernateProps.put(Environment.IMPLICIT_NAMING_STRATEGY, "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
+            hibernateProps.put(Environment.ENABLE_LAZY_LOAD_NO_TRANS, true);
             hibernateProps.put(Environment.DEFAULT_SCHEMA, tenantDatabaseConfig.getIdCode());
             emfBean.setJpaPropertyMap(hibernateProps);
             emfBean.setPersistenceUnitName(dataSource.toString());
