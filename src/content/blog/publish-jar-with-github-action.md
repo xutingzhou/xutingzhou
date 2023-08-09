@@ -105,3 +105,17 @@ jobs:
 或者
 Error: Gradle script '/home/runner/work/gradle-lib-demo/gradle-lib-demo/gradlew' is not executable.
 ```
+
+### 默认打包用于依赖的jar的命名会添加plain，需要将命名中的plain去掉，才能在引用依赖的时候正确下载jar包
+
+```gradle
+jar {
+    archiveClassifier = ''
+}
+```
+
+## 参考
+
+- [Publishing Java packages with Gradle](https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle#publishing-packages-to-github-packages)
+- [Gradle Build Action](https://github.com/marketplace/actions/gradle-build-action)
+- [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/)
