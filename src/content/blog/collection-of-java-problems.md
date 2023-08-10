@@ -1,6 +1,6 @@
 ---
 pubDatetime: 2023-08-09T21:09:00Z
-title: Java问题汇总
+title: Java 问题汇总
 postSlug: collection-of-java-problems
 featured: true
 draft: false
