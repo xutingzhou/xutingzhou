@@ -5,6 +5,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,4 +44,9 @@ export default defineConfig({
   experimental: {
     contentLayer: true,
   },
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true, // set to false when using @vercel/analytics@1.4.0
+    },
+  }),
 });
