@@ -8,7 +8,6 @@
         "@astrojs/rss": "^4.0.7",
         "@astrojs/vercel": "^8.0.6",
         "@resvg/resvg-js": "^2.6.2",
-        "@vercel/analytics": "^1.4.1",
         "astro": "^4.16.18",
         "fuse.js": "^7.0.0",
         "lodash.kebabcase": "^4.1.1",
@@ -29,7 +28,6 @@
         "@types/react": "^18.3.6",
         "@typescript-eslint/parser": "^8.5.0",
         "astro-eslint-parser": "^1.0.3",
-        "esbuild": "^0.24.2",
         "eslint": "^9.10.0",
         "eslint-plugin-astro": "^1.2.4",
         "globals": "^15.9.0",
@@ -1357,7 +1355,7 @@
 
     "wrappy": ["wrappy@1.0.2", "", {}, "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="],
 
-    "xutingzhou": ["xutingzhou@file:", { "dependencies": { "@astrojs/check": "^0.9.3", "@astrojs/rss": "^4.0.7", "@astrojs/vercel": "^8.0.6", "@resvg/resvg-js": "^2.6.2", "@vercel/analytics": "^1.4.1", "astro": "^4.16.18", "fuse.js": "^7.0.0", "lodash.kebabcase": "^4.1.1", "remark-collapse": "^0.1.2", "remark-toc": "^9.0.0", "satori": "^0.11.0", "tailwindcss": "^3.4.11", "typescript": "^5.5.3", "xutingzhou": "file:" }, "devDependencies": { "@astrojs/react": "^3.6.2", "@astrojs/sitemap": "^3.1.6", "@astrojs/tailwind": "^5.1.0", "@tailwindcss/typography": "^0.5.15", "@types/github-slugger": "^1.3.0", "@types/lodash.kebabcase": "^4.1.9", "@types/react": "^18.3.6", "@typescript-eslint/parser": "^8.5.0", "astro-eslint-parser": "^1.0.3", "esbuild": "^0.24.2", "eslint": "^9.10.0", "eslint-plugin-astro": "^1.2.4", "globals": "^15.9.0", "prettier": "^3.3.3", "prettier-plugin-astro": "^0.14.1", "prettier-plugin-tailwindcss": "^0.6.6", "react": "^18.3.1", "react-dom": "^18.3.1", "typescript-eslint": "^8.5.0" } }],
+    "xutingzhou": ["xutingzhou@file:", { "dependencies": { "@astrojs/check": "^0.9.3", "@astrojs/rss": "^4.0.7", "@astrojs/vercel": "^8.0.6", "@resvg/resvg-js": "^2.6.2", "astro": "^4.16.18", "fuse.js": "^7.0.0", "lodash.kebabcase": "^4.1.1", "remark-collapse": "^0.1.2", "remark-toc": "^9.0.0", "satori": "^0.11.0", "tailwindcss": "^3.4.11", "typescript": "^5.5.3", "xutingzhou": "file:" }, "devDependencies": { "@astrojs/react": "^3.6.2", "@astrojs/sitemap": "^3.1.6", "@astrojs/tailwind": "^5.1.0", "@tailwindcss/typography": "^0.5.15", "@types/github-slugger": "^1.3.0", "@types/lodash.kebabcase": "^4.1.9", "@types/react": "^18.3.6", "@typescript-eslint/parser": "^8.5.0", "astro-eslint-parser": "^1.0.3", "eslint": "^9.10.0", "eslint-plugin-astro": "^1.2.4", "globals": "^15.9.0", "prettier": "^3.3.3", "prettier-plugin-astro": "^0.14.1", "prettier-plugin-tailwindcss": "^0.6.6", "react": "^18.3.1", "react-dom": "^18.3.1", "typescript-eslint": "^8.5.0" } }],
 
     "xxhash-wasm": ["xxhash-wasm@1.1.0", "", {}, "sha512-147y/6YNh+tlp6nd/2pWq38i9h6mz/EuQ6njIrmW8D1BS5nCqs0P6DG+m6zTGnNz5I+uhZ0SHxBs9BsPrwcKDA=="],
 
