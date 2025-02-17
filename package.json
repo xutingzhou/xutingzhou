@@ -28,7 +28,7 @@
     "xutingzhou": "file:"
   },
   "devDependencies": {
-    "@astrojs/react": "^3.6.2",
+    "@astrojs/react": "^4.2.0",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^6.0.0",
     "@tailwindcss/typography": "^0.5.15",
