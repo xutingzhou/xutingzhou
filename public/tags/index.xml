@@ -4,84 +4,163 @@
     <title>Tags on Xu Blog</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Xu Blog</description>
-    <image>
-      <title>Xu Blog</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
-    </image>
-    <generator>Hugo -- 0.147.2</generator>
+    <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
     <copyright>Xu Tingzhou</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Css</title>
-      <link>http://localhost:1313/tags/css/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/css/</guid>
+      <title>Fly.io</title>
+      <link>http://localhost:1313/tags/fly.io/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fly.io/</guid>
       <description></description>
     </item>
     <item>
-      <title>Html</title>
-      <link>http://localhost:1313/tags/html/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/html/</guid>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <title>MediaPipe</title>
+      <link>http://localhost:1313/tags/mediapipe/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mediapipe/</guid>
       <description></description>
     </item>
     <item>
-      <title>Themes</title>
-      <link>http://localhost:1313/tags/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/themes/</guid>
+      <title>OpenCat</title>
+      <link>http://localhost:1313/tags/opencat/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/opencat/</guid>
       <description></description>
     </item>
     <item>
-      <title>Code</title>
-      <link>http://localhost:1313/tags/code/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/code/</guid>
+      <title>Tips</title>
+      <link>http://localhost:1313/tags/tips/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tips/</guid>
       <description></description>
     </item>
     <item>
-      <title>Gist</title>
-      <link>http://localhost:1313/tags/gist/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gist/</guid>
+      <title>Npm</title>
+      <link>http://localhost:1313/tags/npm/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/npm/</guid>
       <description></description>
     </item>
     <item>
-      <title>Privacy</title>
-      <link>http://localhost:1313/tags/privacy/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/privacy/</guid>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/react/</guid>
       <description></description>
     </item>
     <item>
-      <title>Shortcodes</title>
-      <link>http://localhost:1313/tags/shortcodes/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/shortcodes/</guid>
+      <title>Redux</title>
+      <link>http://localhost:1313/tags/redux/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/redux/</guid>
       <description></description>
     </item>
     <item>
-      <title>Syntax</title>
-      <link>http://localhost:1313/tags/syntax/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/syntax/</guid>
+      <title>Spring Boot</title>
+      <link>http://localhost:1313/tags/spring-boot/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spring-boot/</guid>
       <description></description>
     </item>
     <item>
-      <title>Emoji</title>
-      <link>http://localhost:1313/tags/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/emoji/</guid>
+      <title>Spring Doc</title>
+      <link>http://localhost:1313/tags/spring-doc/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spring-doc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BLOC</title>
+      <link>http://localhost:1313/tags/bloc/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bloc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dart</title>
+      <link>http://localhost:1313/tags/dart/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Device</title>
+      <link>http://localhost:1313/tags/device/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/device/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flutter</title>
+      <link>http://localhost:1313/tags/flutter/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/flutter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Action</title>
+      <link>http://localhost:1313/tags/github-action/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/github-action/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google</title>
+      <link>http://localhost:1313/tags/google/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/google/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JPA</title>
+      <link>http://localhost:1313/tags/jpa/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jpa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring Security</title>
+      <link>http://localhost:1313/tags/spring-security/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spring-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sprint MVC</title>
+      <link>http://localhost:1313/tags/sprint-mvc/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sprint-mvc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unit Test</title>
+      <link>http://localhost:1313/tags/unit-test/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/unit-test/</guid>
       <description></description>
     </item>
   </channel>
