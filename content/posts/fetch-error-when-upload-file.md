@@ -3,7 +3,7 @@ author: ["Jimmy Xu"]
 title: "使用 Fetch 上传图片时报错 Error: no multipart boundary was found"
 date: "2023-08-10"
 summary: "使用 Fetch 上传图片时报错 Error: no multipart boundary was found"
-tags: ["React", "使用 Fetch 上传图片时报错 Error"]
+tags: ["React", "Exception", "Fetch"]
 categories: ["Learning React"]
 ---
 
