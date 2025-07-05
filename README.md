@@ -5,7 +5,9 @@
 Hi，我是许汀洲，一个开发者。
 
 👋 **Welcome**! 我是许汀洲，一名软件开发者。
-- 主要使用 Java 和 Spring Boot。懂一点 React 和 Flutter。
+
+- ~~主要使用 Java 和 Spring Boot。懂一点 React 和 Flutter。~~
+- 准备 all in js, Hono + React + Electron + React Native。
 - 玩乐高，喜欢机械组。厨艺尚可，享受做饭。喜欢拍照，Sony 用户。游泳只会蛙泳，努力减肥。
 - I'm learning English.
 - 理想：去一个普通的地方，过着普通的生活。
