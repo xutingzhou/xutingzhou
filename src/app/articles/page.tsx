@@ -5,6 +5,7 @@ import { PaginationGroup } from '@/components/PaginationGroup'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { EmptyState } from '@/components/EmptyState'
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -57,14 +58,18 @@ export default async function ArticlesIndex({ searchParams }: { searchParams: Pr
       title="不患人之不能，而患己之不勉。"
       intro="All of my long-form thoughts on programming, learning, and more, collected in chronological order."
     >
-      <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-        <div className="flex max-w-3xl flex-col space-y-16">
-          {paginatedArticles.length > 0 ? paginatedArticles.map((article) => (
-            <Article key={article.slug} article={article} />
-          )) : <p>No articles found.</p>}
+      <div className="flex flex-col min-h-[60vh]">
+        <div className="flex-1">
+          <div className="flex max-w-3xl flex-col space-y-16  md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+            {paginatedArticles.length > 0 ? paginatedArticles.map((article) => (
+              <Article key={article.slug} article={article} />
+            )) : <EmptyState />}
+          </div>
+        </div>
+        <div className="Sticky bottom-0 mt-6">
+          <PaginationGroup currentPage={currentPage} totalPages={totalPages} />
         </div>
       </div>
-      <PaginationGroup currentPage={currentPage} totalPages={totalPages} />
     </SimpleLayout>
   )
 }

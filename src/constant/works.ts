@@ -31,7 +31,7 @@ export const works: Array<Work> = [
     {
         company: '江苏爱高',
         title: 'Software Developer',
-        start: '2014',
+        start: '2018',
         end: '2019',
     },
     {
