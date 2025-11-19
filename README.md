@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="avatar" src="./src/images/avatar.png"/>
+  <img alt="avatar" src="./src/images/avatar.jpg"/>
 </div>
 
 Hi，我是许汀洲，一个开发者。
