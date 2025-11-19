@@ -1,0 +1,237 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-10-06',
+  title: '学习 Schema-First 模式',
+  description:
+    '学习 Schema-First 模式，了解其优势以及在现代应用程序开发中的应用。',
+  tags: ['Learning'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 什么是 schema-first（一句话）
+
+把 API 的 schema（声明请求/响应的结构）当作系统事实来源
+
+一份 schema 同时用于：
+
+- 运行时校验（防止脏数据）
+- TypeScript 类型推导（IDE 自动补全）
+- OpenAPI / 文档生成（自动 SDK）
+
+换言之：schema = types + validation + docs（单一来源，避免重复）。
+
+## 为什么要用 schema-first
+
+- 消除重复：不再为 DTO、类型、validator、文档写 3 份逻辑。
+- 更安全：请求在进入业务逻辑前已被校验（减少 null/undefined/类型错误）。
+- 更高效协作：前端/移动端可以自动生成或直接使用类型/SDK。
+- 更易演进：通过 schema 明确兼容性规则，便于版本管理。
+
+## 技术栈
+
+- [Zod](https://zod.dev/)：声明式 schema 定义，支持 TypeScript 类型推导和运行时校验。
+- [Prisma](https://www.prisma.io/)：数据库 ORM，支持类型安全的数据库操作。
+- [TypeScript](https://www.typescriptlang.org/)：JavaScript 超集，提供静态类型检查。
+- [OpenAPI](https://swagger.io/specification/)：API 规范，支持自动生成文档和 SDK。
+- [Swagger UI](https://swagger.io/tools/swagger-ui/)：API 文档展示工具，支持交互式文档。
+- [Hono](https://hono.dev/)：轻量级 web 框架，支持中间件和路由。
+- [Vite](https://vitejs.dev/)：现代前端构建工具，支持快速开发和热更新。
+- [Turborepo](https://turbo.build/repo)：高性能 monorepo 工具，支持多包管理和构建优化。
+- [React](https://react.dev/)：前端 UI 库，构建用户界面。
+- [React Native](https://reactnative.dev/)：跨平台移动应用框架，使用 React 构建原生应用。
+
+## 项目结构
+
+```bash
+apps/
+  web/          # React (前端)
+  mobile/       # React Native (移动端)
+  api/          # Hono 后端
+packages/
+  contracts/    # <-- 对外契约（schema-first 的核心）
+  ui/           # 共享 UI 组件（web & mobile）
+  utils/        # 通用工具函数
+```
+
+### contracts/（公共 schema 层）
+
+- 用 zod / valibot / typebox 定义请求 & 响应
+- 导出 TypeScript 类型 给前端、后端共享
+- 用 @hono/zod-openapi 或 ts-rest 生成 OpenAPI 文档
+
+```typescript
+import { z } from 'zod'
+
+// 请求体 schema
+export const RegisterUserSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+})
+
+// 响应 schema
+export const UserResponseSchema = z.object({
+  id: z.string().uuid(),
+  email: z.string().email(),
+  createdAt: z.string(),
+})
+
+// 导出类型给前端用
+export type RegisterUserInput = z.infer<typeof RegisterUserSchema>
+export type UserResponse = z.infer<typeof UserResponseSchema>
+```
+
+### api/（后端实现层）
+
+在后端只 import contract，然后实现逻辑
+
+```typescript
+import { Hono } from 'hono'
+import { RegisterUserSchema, UserResponseSchema } from '@myorg/contracts/user'
+
+const app = new Hono()
+
+app.post('/users', async (c) => {
+  const body = RegisterUserSchema.parse(await c.req.json())
+
+  // 内部实现逻辑 (service + db)
+  const user = await createUser(body)
+
+  // 返回时保证符合 contract
+  return c.json(UserResponseSchema.parse(user))
+})
+
+export default app
+```
+
+### web/（前端 React）
+
+前端只依赖 contract，保证类型对齐：
+
+```typescript
+import { RegisterUserInput, UserResponse } from '@myorg/contracts/user'
+
+async function registerUser(data: RegisterUserInput): Promise<UserResponse> {
+  const res = await fetch('/api/users', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+
+  return (await res.json()) as UserResponse
+}
+```
+
+### mobile/(React Native)
+
+同样用 contracts 类型
+
+```typescript
+import { RegisterUserInput, UserResponse } from '@myorg/contracts/user'
+
+async function registerUserMobile(
+  data: RegisterUserInput,
+): Promise<UserResponse> {
+  const res = await fetch('https://api.example.com/users', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+
+  return (await res.json()) as UserResponse
+}
+```
+
+#### 为什么要区分 contract 和 实现
+
+- 对外 contract (契约 / API contract)
+
+  就是前后端都要遵守的 公共协议，它定义了：
+  - API endpoint
+  - 请求参数的 schema（query, body, params, headers）
+  - 响应结构
+  - 错误结构
+
+    这些东西 不能随便改，否则会导致前端/移动端与后端脱节。
+
+- 内部实现 (implementation)
+
+  就是后端的具体业务逻辑：
+  - 数据库 ORM (Prisma/Drizzle)
+  - 业务 service 层
+  - repo 层
+
+    这些是可以随时重构的，但前端只关心最终暴露出来的 contract。
+
+**换句话说，contract = 外部承诺；实现 = 内部细节。**
+
+#### Schema-First 的优势
+
+- 强契约：前端 & 移动端 100% 类型安全，不会出现「后端返回字段变了前端没发现」的情况
+- 统一文档：可以自动生成 OpenAPI / Swagger，甚至生成 Postman 集合
+- 演进安全：即使后端内部换 ORM / 微服务重构，对外 contract 不变，前端无感知
+- 共享逻辑：schema 还能复用到表单验证、前端校验、后端校验，保持一致性
+
+#### contracts vs API
+
+- contracts = 「声明我们要提供什么」
+- api = 「实现我们如何提供它」
+
+### 常见 schema 模式（zod 写法 + 组合／复用）
+
+```typescript
+// schemas/v1/user.schema.ts
+import { z } from 'zod'
+
+export const UserBase = z.object({
+  name: z.string().min(1),
+  age: z.number().int().min(0),
+})
+
+export const UserCreate = UserBase.pick({ name: true, age: true })
+export const UserOutput = UserBase.extend({ id: z.string() })
+
+export type UserCreateType = z.infer<typeof UserCreate>
+export type UserOutputType = z.infer<typeof UserOutput>
+```
+
+复用技巧：merge, pick, omit, extend，避免重复定义字段。
+
+### 异步校验（例如唯一性）
+
+zod 支持 async refine，但在路由层通常把这类检查放到 handler / service 层：
+
+```typescript
+// handler
+const body = await c.req.valid('json')
+const exists = await userService.existsByName(body.name)
+if (exists) return c.json({ error: 'name exists' }, 409)
+```
+
+或用 safeParseAsync 与 zod 的 async refine（注意性能 & DB 调用）。
+
+### 与 DB/Domain 模型分离
+
+不要把 Prisma model 直接当 API schema。实践：
+
+- db/user.model.ts（Prisma 类型）
+- schemas/v1/user.schema.ts（API contract）
+- 在 service 层做转换：
+  ```typescript
+  function mapDbToUserOutput(dbUser: PrismaUser): UserOutputType {
+    return { id: dbUser.id, name: dbUser.name, age: dbUser.age }
+  }
+  ```
+
+这样你可以自由改变内部模型而不破坏外部 contract。
+
+### 性能 & 实践技巧
+
+- zod 的验证通常很快—但对超大数组/深度递归数据要小心（可分段验证）。
+- 在高吞吐服务里：只校验必要字段（例如对大文件只验证元数据），或在边缘做粗略验证、在核心服务做深度校验。
+- 将复杂/昂贵的 async 验证放到 service 层，不要把 DB 查询放到每一次同步 refine 中（会影响并发）
