@@ -6,6 +6,7 @@ interface Life {
     author: string
     date: string
     tags?: string[]
+    private?: boolean
 }
 
 export interface LifeWithSlug extends Life {
@@ -32,6 +33,7 @@ export async function getAllLife({ tag }: { tag?: string }) {
     })
     const life = await Promise.all(articleFilenames.map(importLife))
     return life
+        .filter((life) => !life.private)
         .filter((life) => (tag ? life?.tags?.includes(tag) : true))
         .sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }

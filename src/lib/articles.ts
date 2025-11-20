@@ -6,6 +6,7 @@ interface Article {
   author: string
   date: string
   tags?: string[]
+  private?: boolean
 }
 
 export interface ArticleWithSlug extends Article {
@@ -32,6 +33,7 @@ export async function getAllArticles({ tag }: { tag?: string }) {
   })
   const articles = await Promise.all(articleFilenames.map(importArticle))
   return articles
+    .filter((article) => !article.private)
     .filter((article) => (tag ? article?.tags?.includes(tag) : true))
     .sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }

@@ -1,0 +1,21 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import WeightChart from './components/WeightChart'
+
+export const life = {
+  author: 'Jimmy Xu',
+  date: '2025-11-20',
+  title: '记录一下减肥',
+  description: '感觉体重下降得还不错，就记录一下吧',
+  tags: ['health'],
+}
+
+export const metadata = {
+  title: life.title,
+  description: life.description,
+}
+
+export default (props) => <ArticleLayout article={life} {...props} />
+
+## 体重变化趋势
+
+<WeightChart />
