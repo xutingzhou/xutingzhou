@@ -1,0 +1,30 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2023-08-10',
+  title: 'React Datepicker 设置中文',
+  description: '在 React 项目中使用 react-datepicker 并设置为中文显示。',
+  tags: ['React'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+[React Datepicker](https://reactdatepicker.com/)
+
+```typescript
+import DatePicker, { registerLocale } from "react-datepicker";
+import zhCN from "date-fns/locale/zh-CN"; // the locale you want
+registerLocale("zhCN", zhCN);
+
+<DatePicker
+    dateFormat="yyyy-MM-dd"
+    locale="zhCN"
+    ...
+/>
+```

@@ -1,0 +1,34 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2023-08-11',
+  title: 'Use Qr Code to Display Wifi Password',
+  description:
+    'Share your wifi password easily by generating a QR code that can be scanned by any smartphone.',
+  tags: ['Tips'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Why
+
+- Often forget the password
+- Use a long random password to enhance security
+- Easy to connect
+
+## Qr Code Format
+
+```md
+WIFI:T:WPA;S:<SSID>;P:<PASSWORD>;;
+```
+
+## Minimum OS Requirements
+
+- Android 10
+- IOS 11
