@@ -5,7 +5,6 @@ import { PaginationGroup } from '@/components/PaginationGroup'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { formatDate } from '@/lib/formatDate'
 import { getAllLife, type LifeWithSlug } from '@/lib/life'
-import { motion } from "framer-motion"
 import { EmptyState } from '../../components/EmptyState'
 
 function Life({

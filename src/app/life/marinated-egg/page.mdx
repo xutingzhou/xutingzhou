@@ -1,0 +1,58 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import marinatedEgg from './marinated-egg.jpg'
+
+export const life = {
+  author: 'Jimmy Xu',
+  date: '2025-11-04',
+  title: '卤蛋',
+  description: '卤蛋的制作方法',
+  tags: ['recipe', 'egg'],
+}
+
+export const metadata = {
+  title: life.title,
+  description: life.description,
+}
+
+export default (props) => <ArticleLayout article={life} {...props} />
+
+## 🍴 基本信息
+
+    约 40 分钟
+
+    难度：⭐️
+
+## 🛒 食材准备
+
+| 食材   | 数量         | 备注             |
+| ------ | ------------ | ---------------- |
+| 鸡蛋   | 15 个        |
+| 花椒   | 20 粒        |
+| 八角   | 3 个         |
+| 桂皮   | 食指长短一根 |
+| 香叶   | 2 片         |
+| 干辣椒 | 4 个         | 根据自身口味调整 |
+| 丁香   | 2 颗         |
+| 老抽   | 50ml         |
+| 生抽   | 100ml        |
+| 冰糖   | 30 克        |
+| 盐     |              | 根据自己口味添加 |
+
+## 🔥 烹饪步骤
+
+1. 将鸡蛋冷水下锅，水要没过所有鸡蛋，并高出鸡蛋 5cm 左右。大火将水烧开后，转中火，煮 5 分钟。
+2. 将鸡蛋取出，过冷水，方便剥皮，剥皮备用。
+3. 在锅中放入除盐之外的所有用料，加入 1L 水，有高汤最佳。大火将料汁烧开，转小火，煮半小时。
+4. 尝一尝味道，根据自己的口味加盐。
+5. 过滤卤汁中的卤料，将鸡蛋放入卤汁中，待放凉后，密封放入冰箱，卤最少 48 小时。
+
+## 📝 贴士 / 改良建议
+
+- [煮鸡蛋参考水煮蛋技巧汇总](../life/tips-for-boiling-eggs)
+- 至少卤 48 小时，才入味好吃。凉的更好吃。
+- 辣度、咸度根据自身口味调整
+- 香料有什么就放什么，不一定放全。
+
+## 📸 照片 / 成品图
+
+<Image src={marinatedEgg} alt="卤蛋成品图" />

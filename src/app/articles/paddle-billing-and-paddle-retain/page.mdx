@@ -1,0 +1,107 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-11-14',
+  title: 'Paddle Billing & Paddle Retain',
+  description:
+    'Introduction to Paddle Billing and Paddle Retain for subscription management and customer retention.',
+  tags: ['Pay', 'Paddle'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+_Paddle Billing 和 Paddle Retain 是两个不同但互补的产品。_
+
+## Paddle Billing —— 负责收费、开票、税务、结账
+
+### 定位
+
+完整的 SaaS 收费系统（Revenue Delivery Platform）
+
+### 用于实际执行收费动作
+
+    - 💳 核心功能
+        - Checkout（结账系统）
+        - Hosted Checkout（跳转页面）
+        - In-app checkout
+        - Web embed checkout
+    - 订阅管理：
+        - 创建订阅
+        - 升级/降级
+        - 试用管理
+        - proration（按比例计费）
+    - 支付方式管理
+        - 信用卡
+        - PayPal
+        - Apple Pay / Google Pay
+        - Direct Debit（DD）
+    - 税务处理（VAT/GST/Sales tax）
+        - Paddle 做 Merchant of Record（MoR）
+        - 自动收税、申报、汇款
+    - 发票、账单、收据
+    - Refund / chargeback 管理
+    - GraphQL API + Webhooks
+
+### 📌 目标
+
+    👉 负责你全部的 SaaS 收费逻辑
+    你不需要自己处理税、订阅生命周期、价格变更等。
+
+## Paddle Retain —— 负责减少流失（Churn Reduction）
+
+_针对 失败续费 与 信用卡过期 的问题。_
+
+即使使用 Stripe 的人，也常用 Paddle Retain。
+
+### 🚑 核心功能
+
+    - 智能重试（Smart Retry）
+        自动优化失败付款重试的时间、频率和方式。
+    - 信用卡更新流程（Card updater）
+        用户卡快过期时，自动发邮件 + 提醒更新。
+    - 降价留存（Retention Discounts）
+        用户想取消订阅时弹出优惠，例如：“保留 50% off 3 个月”
+    - Checkout rescue（结账补救）
+        付款失败后自动引导用户完成支付。
+    - 邮件模板 + 自动化
+    - Churn 分析仪表盘
+
+### 📌 目标
+
+    👉 减少 involuntary churn（非自愿流失）
+    例如信用卡过期、银行拒付等造成的订阅失败。
+
+## 它们的关系（非常重要）
+
+- Paddle Billing → 负责“收费”
+- Paddle Retain → 负责“减少付费失败”
+
+你可以：
+
+- 只用 Paddle Billing
+- 只用 Paddle Retain（例如你用 Stripe 收费）
+- 同时使用两个（最佳）
+
+两者是互补而非替代关系。
+
+### 💡 什么时候该用 Paddle Billing？
+
+- 你不想处理税收（VAT/GST/Sales Tax）
+- 想让 Paddle stand as MoR（替你处理全球合规）
+- 想有简单的 Checkout + 订阅 API
+- 你在卖数字产品、SaaS
+- 👉 大部分 SaaS 新项目推荐 Paddle Billing
+
+### 💡 什么时候要加 Paddle Retain？
+
+- 订阅用户数量增长，失效续费变多
+- 信用卡失败率高（尤其 B2C）
+- 想要更智能的重试系统
+- 想在取消流程中增加“挽留优惠”
+- 👉 订阅模式强烈建议同时使用 Retain（Stripe 用户也常只用 Retain）。
