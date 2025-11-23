@@ -1,16 +1,15 @@
-"use client";
+"use client"
 
-import { Card } from "@/components/Card";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import type { ArticleWithSlug } from "@/lib/articles";
-import { formatDate } from "@/lib/formatDate";
-import Fuse from "fuse.js";
-import { useEffect, useState } from "react";
+import { Article } from "@/components/Article"
+import { SimpleLayout } from "@/components/SimpleLayout"
+import type { ArticleWithSlug } from "@/lib/articles"
+import Fuse from "fuse.js"
+import { useEffect, useState } from "react"
 
 export default function SearchPage() {
-    const [fuse, setFuse] = useState<Fuse<ArticleWithSlug> | null>(null);
-    const [query, setQuery] = useState("");
-    const [results, setResults] = useState<ArticleWithSlug[]>([]);
+    const [fuse, setFuse] = useState<Fuse<ArticleWithSlug> | null>(null)
+    const [query, setQuery] = useState("")
+    const [results, setResults] = useState<ArticleWithSlug[]>([])
 
     useEffect(() => {
         fetch("/searchIndex.json")
@@ -19,19 +18,19 @@ export default function SearchPage() {
                 const fuseInstance = new Fuse<ArticleWithSlug>(docs, {
                     keys: ["title", "description", "tags"],
                     threshold: 0.3,
-                });
-                setFuse(fuseInstance);
-            });
-    }, []);
+                })
+                setFuse(fuseInstance)
+            })
+    }, [])
 
     useEffect(() => {
         if (fuse && query.trim()) {
-            const r = fuse.search(query);
-            setResults(r.map(i => i.item));
+            const r = fuse.search(query)
+            setResults(r.map(i => i.item))
         } else {
-            setResults([]);
+            setResults([])
         }
-    }, [query, fuse]);
+    }, [query, fuse])
 
     return (
         <SimpleLayout
@@ -49,32 +48,9 @@ export default function SearchPage() {
                     onChange={(e) => setQuery(e.target.value)}
                 />
                 {results.map((res) => (
-                    <article className="md:grid md:grid-cols-4 md:items-baseline" key={res.slug}>
-                        <Card className="md:col-span-3" >
-                            <Card.Title href={res.slug}>
-                                {res.title}
-                            </Card.Title>
-                            <Card.Eyebrow
-                                as="time"
-                                dateTime={res.date}
-                                className="md:hidden"
-                                decorate
-                            >
-                                {formatDate(res.date)}
-                            </Card.Eyebrow>
-                            <Card.Description>{res.description}</Card.Description>
-                            <Card.Cta>Read</Card.Cta>
-                        </Card>
-                        <Card.Eyebrow
-                            as="time"
-                            dateTime={res.date}
-                            className="mt-1 max-md:hidden"
-                        >
-                            {formatDate(res.date)}
-                        </Card.Eyebrow>
-                    </article>
+                    <Article key={res.slug} article={res} />
                 ))}
             </div>
         </SimpleLayout>
-    );
+    )
 }
