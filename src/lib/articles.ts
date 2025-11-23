@@ -22,7 +22,7 @@ async function importArticle(
     }
 
     return {
-        slug: name.replace(/(\/page)?\.mdx$/, ''),
+        slug: `/${path}/${name.replace(/\/page\.mdx?$/, '')}`,
         ...article,
     }
 }
