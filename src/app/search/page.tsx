@@ -13,7 +13,6 @@ export default function SearchPage() {
     const [results, setResults] = useState<ArticleWithSlug[]>([]);
 
     useEffect(() => {
-        // 加载搜索索引
         fetch("/searchIndex.json")
             .then(res => res.json())
             .then(docs => {
@@ -37,12 +36,15 @@ export default function SearchPage() {
     return (
         <SimpleLayout
             title="搜索"
-            intro="搜索"
+            intro="搜索关键字：文章标题、描述和标签。"
         >
             <div className="flex max-w-3xl flex-col space-y-16 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <input
-                    className="border px-3 py-2 w-full"
+                    type="search"
                     placeholder="搜索内容..."
+                    aria-label="搜索内容"
+                    required
+                    className="w-full appearance-none rounded-[calc(var(--radius-md)-1px)] bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 outline outline-zinc-900/10 placeholder:text-zinc-400 focus:ring-4 focus:ring-teal-500/10 focus:outline-teal-500 sm:text-sm dark:bg-zinc-700/15 dark:text-zinc-200 dark:outline-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-teal-400/10 dark:focus:outline-teal-400"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />

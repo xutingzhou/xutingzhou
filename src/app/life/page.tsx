@@ -1,26 +1,11 @@
 import type { Metadata } from 'next'
 
-import { Card } from '@/components/Card'
+import { Article } from '@/components/Article'
 import { PaginationGroup } from '@/components/PaginationGroup'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllLife } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
+import { getAllLife } from '@/lib/articles'
 import { EmptyState } from '../../components/EmptyState'
 
-function Life({ life }: { life: ArticleWithSlug }) {
-    return (
-        <Card as="article">
-            <Card.Title href={`/life/${life.slug}`}>
-                {life.title}
-            </Card.Title>
-            <Card.Eyebrow as="time" dateTime={life.date} decorate>
-                {formatDate(life.date)}
-            </Card.Eyebrow>
-            <Card.Description>{life.description}</Card.Description>
-            <Card.Cta>Read</Card.Cta>
-        </Card>
-    )
-}
 
 export const metadata: Metadata = {
     title: 'Life',
@@ -49,7 +34,7 @@ export default async function LifeIndex({ searchParams }: { searchParams: Promis
                     <div className="flex max-w-3xl flex-col space-y-16 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                         {paginatedLife.length > 0 ? (
                             paginatedLife.map((life) => (
-                                <Life key={life.slug} life={life} />
+                                <Article key={life.slug} article={life} />
                             ))
                         ) : (
                             <EmptyState />
