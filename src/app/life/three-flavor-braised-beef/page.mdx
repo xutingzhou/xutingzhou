@@ -1,0 +1,63 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import threeFlavorBraisedBeef from './three-flavor-braised-beef.jpg'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-11-10',
+  title: '三酱牛肉',
+  description: '三酱牛肉的制作方法',
+  tags: ['recipe', 'beef'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 🍴 基本信息
+
+    约 2小时30 分钟
+
+    难度：⭐️⭐️
+
+## 🛒 食材准备
+
+| 食材   | 数量           | 备注        |
+| ------ | -------------- | ----------- |
+| 牛腱肉 | 1.4kg          | 完整的 2 块 |
+| 酱油   | 一杯 270g      |
+| 花椒   | 一汤勺 5g      |
+| 八角   | 4 个 3g        |
+| 桂皮   | 一根 3g        |
+| 草果   | 一个 2g        |
+| 香叶   | 4 片 1g        |
+| 陈皮   | 一片 2g        |
+| 山楂   | 5 个 3g        |
+| 干辣椒 | 6 个 5g        |
+| 生姜   | 一块 42g       |
+| 洋葱   | 四分之一个 60g |
+| 甜面酱 | 半杯 160g      |
+| 豆腐乳 | 3 块 25g       |
+| 盐     | 适量           |
+
+## 🔥 烹饪步骤
+
+1. 牛腱子泡水 3 小时，去除血水
+2. 泡好的牛腱子控水，倒入一杯酱油 270g，混合均匀，封口，放入冰箱，隔夜浸泡
+3. 将浸泡的牛腱子和酱油一起倒入锅中，锅中加冷水，完全浸没牛腱子，高出 5cm
+4. 烧开水后，去除血沫
+5. 加入所有香料，加入一杯甜面酱 160g，加入洋葱 60g，生姜 42g，豆腐乳 25g
+6. 小火炖 2 个小时，用筷子插入牛腱子中能感到一些阻力
+7. 关火后，盖盖子，焖到凉了，
+8. 取出牛腱子，用保鲜膜裹紧，放入冰箱，隔夜吃更棒
+
+## 📝 贴士 / 改良建议
+
+- 中途尝尝咸淡，加入适量的盐
+- 放凉后，用保鲜膜裹紧，再放入冰箱，有利于定型，好切
+
+## 📸 照片 / 成品图
+
+<Image src={threeFlavorBraisedBeef} alt="三酱牛肉成品图" />
