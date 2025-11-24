@@ -8,15 +8,6 @@ export interface Work {
 
 export const works: Array<Work> = [
     {
-        company: '8XL Studio',
-        title: 'Founder',
-        start: '2023',
-        end: {
-            label: 'Present',
-            dateTime: new Date().getFullYear().toString(),
-        },
-    },
-    {
         company: '昆山广联发',
         title: 'Software Developer',
         start: '2024',

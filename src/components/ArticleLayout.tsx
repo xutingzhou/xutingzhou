@@ -1,14 +1,14 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import { useContext } from 'react'
-
 import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import type { ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { capitalize } from '@/lib/word'
 import { IconArrowLeft } from '@tabler/icons-react'
+import { useRouter } from 'next/navigation'
+import { useContext } from 'react'
 import { Badge } from './ui/badge'
 
 
@@ -46,9 +46,15 @@ export function ArticleLayout({
                   <div className="flex gap-3 flex-wrap mt-4">
                     {
                       article.tags.map((tag) => (
-                        <Badge key={tag} color="lime" onClick={() => {
-                          router.replace(`/${path}?tag=${tag}`)
-                        }}>{tag}</Badge>
+                        <Badge
+                          key={tag}
+                          color="lime"
+                          onClick={() => {
+                            router.replace(`/${path}?tag=${tag}`)
+                          }}
+                        >
+                          {capitalize(tag)}
+                        </Badge>
                       ))
                     }
                   </div>
