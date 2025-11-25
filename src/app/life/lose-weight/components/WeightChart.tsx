@@ -20,6 +20,7 @@ export default function WeightChart({ data }: Props) {
                 { x: 7, y: 84.0 },
                 { x: 8, y: 84.7 },
                 { x: 9, y: 84.5 },
+                { x: 10, y: 84.0 },
             ],
         },
     ];

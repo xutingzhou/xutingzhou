@@ -1,0 +1,90 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-11-12',
+  title: '真鳕鱼 vs 黑鳕鱼 vs 银鳕鱼 vs 狭鳕鱼',
+  description: '分享各种常见鳕鱼的区别，帮助你更好地选择和烹饪。',
+  tags: ['life hacks', 'Ingredients'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 🐟 一、真鳕鱼（True Cod）
+
+`学名：`Gadus morhua（大西洋鳕 / Atlantic cod）
+
+`科属：`鳕科（Gadidae）真正的“鳕鱼”
+
+`主要产地：`北大西洋（挪威、冰岛、加拿大、格陵兰等）
+
+`特点：`
+
+- 鱼肉洁白、片状分明、纤维感强
+- 味道清淡略甜，适合煎、炸、炖
+- 常用于英国炸鱼薯条（Fish & Chips）
+
+✅ 是真正意义上的鳕鱼。
+
+💰 价格中等偏高。
+
+## 🐟 二、黑鳕鱼（Black Cod）
+
+`学名：`Anoplopoma fimbria
+
+`中文学名：`裸盖鱼、银鳕鱼（这点很坑，见下）
+
+`主要产地：`北太平洋（阿拉斯加、日本北海道）
+
+`特点：`
+
+- 肉质柔软、脂肪丰富（尤其富含 DHA 和 EPA）
+- 味道香浓细腻、入口即化
+
+`著名菜式：`味噌银鳕鱼（Miso Black Cod）
+
+❌ 名字虽然叫“黑鳕”，但其实不是鳕科鱼类，是拟裸盖鱼科。
+
+✅ 不过营养和口感极好，在高档餐厅常用。
+
+💰 价格高昂（高于真鳕鱼）。
+
+## 🐟 三、银鳕鱼（银鳕、银鳕鱼）
+
+⚠️ 这里是中文里最容易混淆的部分。
+
+市面上“银鳕鱼”通常是指 黑鳕鱼（Anoplopoma fimbria），所以“银鳕鱼 = 黑鳕鱼”在餐厅标注中常常是同一种鱼。真正意义上并没有“银鳕科”这个分类。✅ 所以如果你在菜单上看到「银鳕鱼」、「味噌银鳕」，那基本上吃到的是 黑鳕（Black Cod）。
+
+💡“银鳕”这个叫法只是因为鱼皮发亮像银色。
+
+## 🐟 四、狭鳕鱼（Alaska Pollock）
+
+`学名：`Theragra chalcogramma 或 Gadus chalcogrammus
+
+`主要产地：`北太平洋、白令海
+
+`特点：`
+
+- 肉质松散、味道清淡、脂肪低
+- 常用于制作鱼排、蟹肉棒（仿蟹肉棒 Surimi）
+- 营养相对普通
+
+✅ 属于鳕科，但不是“真鳕”（与大西洋鳕不同种）
+
+💰 价格便宜，是“平价鳕鱼”。
+
+## 📊 对比总结表
+
+| 名称     | 真鳕鱼                  | 黑鳕鱼 / 银鳕鱼 | 狭鳕鱼            |
+| -------- | ----------------------- | --------------- | ----------------- |
+| 学名     | Gadus morhua Anoplopoma | fimbria Gadus   | chalcogrammus     |
+| 科属     | 鳕科                    | 拟裸盖鱼科      | 鳕科              |
+| 是否真鳕 | ✅ 是                   | ❌ 否           | ✅ 属鳕科但非真鳕 |
+| 口感     | 清淡结实                | 细腻肥美        | 松散清淡          |
+| 价格     | 💰💰                    | 💰💰💰          | 💰                |
+| 常见用途 | 炸鱼、炖鱼              | 烤制、味噌黑鳕  | 鱼排、蟹肉棒      |
