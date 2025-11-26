@@ -1,5 +1,8 @@
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 import { links } from '@/constant/navLinks'
+import { departureMono } from '@/fonts/departureMono'
+import { cn } from '@/lib/cn'
+import { CopyrightIcon } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
 function NavLink({
@@ -35,9 +38,8 @@ export function Footer() {
                   ))
                 }
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Jimmy Xu. All rights
-                reserved.
+              <p className={cn("flex items-center justify-center gap-2 text-[11px] text-zinc-400 dark:text-zinc-500", departureMono.className)}>
+                <CopyrightIcon /> {new Date().getFullYear()} Jimmy Xu. All rights reserved.
               </p>
             </div>
           </ContainerInner>

@@ -1,6 +1,3 @@
-import clsx from 'clsx'
-import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { SocialLink } from '@/components/SocialLink'
@@ -17,6 +14,7 @@ import { getAllArticles, type ArticleWithSlug } from '@/lib/articles'
 import { cn } from '@/lib/cn'
 import { formatDate } from '@/lib/formatDate'
 import { PaperPlaneTiltIcon, SuitcaseSimpleIcon } from "@phosphor-icons/react/ssr"
+import Image from 'next/image'
 
 function Article({ article }: { article: ArticleWithSlug }) {
     return (
@@ -126,7 +124,7 @@ function Photos() {
                 {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
                     <div
                         key={image.src}
-                        className={clsx(
+                        className={cn(
                             'relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
                             rotations[imageIndex % rotations.length],
                         )}
@@ -152,7 +150,9 @@ export default async function Home() {
             <Container className="mt-9">
                 <div className="max-w-2xl">
                     <h1>
-                        <span className={cn(" text-zinc-800 dark:text-zinc-100 text-[88px]", departureMono.className)}>WELCOME!</span>
+                        <span className={cn(" text-zinc-800 dark:text-zinc-100 text-[44px] lg:text-[88px] pixel-jitter glow-text tracking-[2px] uppercase", departureMono.className)}>
+                            WELCOME!
+                        </span>
                     </h1>
                     <ul className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                         <li>我是许汀洲，一名软件开发者。</li>
