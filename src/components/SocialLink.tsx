@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Tooltip } from './ui/tooltip'
 
 export function SocialLinkWithText({
     href,
@@ -23,13 +24,18 @@ export function SocialLinkWithText({
 
 export function SocialLink({
     icon: Icon,
+    tooltip,
     ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
     icon: React.ComponentType<{ className?: string }>
+    tooltip: string
 }) {
     return (
-        <Link className="group -m-1 p-1" target="_blank" {...props}>
-            <Icon className="h-6 w-6 transition group-hover:fill-zinc-300 dark:group-hover:fill-zinc-500" />
-        </Link>
+        <Tooltip tooltip={tooltip}>
+            <Link className="group -m-1 p-1" target="_blank" {...props}>
+                <Icon className="h-6 w-6 transition group-hover:fill-zinc-300 dark:group-hover:fill-zinc-500" />
+            </Link>
+        </Tooltip>
+
     )
 }

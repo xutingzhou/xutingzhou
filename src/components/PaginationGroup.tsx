@@ -1,7 +1,10 @@
-import { getPageNumbers } from "@/lib/getPageNumbers";
-import { Pagination, PaginationGap, PaginationList, PaginationNext, PaginationPage, PaginationPrevious } from "./ui/pagination";
+import { getPageNumbers } from "@/lib/getPageNumbers"
+import { Pagination, PaginationGap, PaginationList, PaginationNext, PaginationPage, PaginationPrevious } from "./ui/pagination"
 
-export function PaginationGroup({ currentPage, totalPages }: { currentPage: number; totalPages: number; }) {
+export function PaginationGroup({ currentPage, totalPages }: {
+    currentPage: number
+    totalPages: number
+}) {
 
     const pageNumbers = getPageNumbers(currentPage, totalPages)
 

@@ -169,6 +169,7 @@ export default async function Home() {
                                     href={link.href}
                                     aria-label={link.name}
                                     icon={link.icon}
+                                    tooltip={link.name}
                                 />
                             ))
                         }
