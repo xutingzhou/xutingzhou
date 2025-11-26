@@ -7,19 +7,21 @@ import { SocialLink } from '@/components/SocialLink'
 import { Button } from '@/components/ui/button'
 import { socialLinks } from '@/constant/socialLinks'
 import { works, type Work } from '@/constant/works'
+import { departureMono } from '@/fonts/departureMono'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles, type ArticleWithSlug } from '@/lib/articles'
+import { cn } from '@/lib/cn'
 import { formatDate } from '@/lib/formatDate'
-import { IconBriefcase, IconMail } from '@tabler/icons-react'
+import { PaperPlaneTiltIcon, SuitcaseSimpleIcon } from "@phosphor-icons/react/ssr"
 
 function Article({ article }: { article: ArticleWithSlug }) {
     return (
         <Card as="article">
-            <Card.Title href={`/articles/${article.slug}`}>
+            <Card.Title href={article.slug}>
                 {article.title}
             </Card.Title>
             <Card.Eyebrow as="time" dateTime={article.date} decorate>
@@ -38,7 +40,7 @@ function Newsletter() {
             className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
         >
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                <IconMail className="h-6 w-6 flex-none" />
+                <PaperPlaneTiltIcon className="h-6 w-6 flex-none" />
                 <span className="ml-3">保持联系</span>
             </h2>
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -102,7 +104,7 @@ function Resume() {
     return (
         <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                <IconBriefcase className="h-6 w-6 flex-none" />
+                <SuitcaseSimpleIcon className="h-6 w-6 flex-none" />
                 <span className="ml-3">Work</span>
             </h2>
             <ol className="mt-6 space-y-4">
@@ -149,8 +151,8 @@ export default async function Home() {
         <>
             <Container className="mt-9">
                 <div className="max-w-2xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        👋 Welcome !
+                    <h1>
+                        <span className={cn(" text-zinc-800 dark:text-zinc-100 text-[88px]", departureMono.className)}>WELCOME!</span>
                     </h1>
                     <ul className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                         <li>我是许汀洲，一名软件开发者。</li>

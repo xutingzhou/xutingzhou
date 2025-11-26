@@ -6,7 +6,7 @@ import { Prose } from '@/components/Prose'
 import type { ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { capitalize } from '@/lib/word'
-import { IconArrowLeft } from '@tabler/icons-react'
+import { ArrowLeftIcon } from '@phosphor-icons/react/dist/ssr'
 import { useRouter } from 'next/navigation'
 import { useContext } from 'react'
 import { Badge } from './ui/badge'
@@ -34,7 +34,7 @@ export function ArticleLayout({
             aria-label="Go back to articles"
             className="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-0 xl:mt-0 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
           >
-            <IconArrowLeft className="h-6 w-6 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
+            <ArrowLeftIcon className="h-6 w-6 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
           </button>
           <article>
             <header className="flex flex-col">

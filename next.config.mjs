@@ -9,6 +9,9 @@ const nextConfig = {
     '/articles/*': ['./src/app/articles/**/*.mdx'],
     '/life/*': ['./src/app/life/**/*.mdx'],
   },
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
 }
 
 const withMDX = nextMDX({
