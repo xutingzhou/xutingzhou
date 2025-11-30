@@ -1,0 +1,77 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-11-29',
+  title: 'MediaPipe 和 tensorflow 的关系',
+  description: '解析 MediaPipe 与 TensorFlow 之间的联系与区别。',
+  tags: ['Machine Learning', 'Google', 'MediaPipe', 'TensorFlow'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+MediaPipe 和 TensorFlow 都是 Google 开发的开源机器学习（ML）工具，但它们在 AI 开发生命周期中扮演着完全不同但互补的角色。
+
+用一句话概括它们的关系：TensorFlow 负责造“引擎”（训练模型），而 MediaPipe 负责造“整车”（构建应用流水线）。
+
+以下是它们关系的详细解析：
+
+## 1. 核心角色的区别
+
+- TensorFlow (TF): 模型训练与推理框架
+  - 主要任务：定义神经网络架构、训练模型（使用大量数据）、优化权重。
+  - 核心产出：一个训练好的模型文件（如 .pb 或 .tflite 文件）。
+  - 关注点：数学运算、张量（Tensors）、反向传播、准确率。
+
+- MediaPipe: 应用流水线框架
+  - 主要任务：处理多媒体数据（视频流、音频）、进行预处理和后处理、将模型集成到实际应用中。
+  - 核心产出：一个完整的、可运行的解决方案（如手部追踪、人脸网格、姿态估计）。
+  - 关注点：实时性、跨平台（Android/iOS/Web）、数据流同步、可视化。
+
+## 2. 它们是如何协同工作的？
+
+MediaPipe 并不替代 TensorFlow，而是包裹着它。在实际应用中，它们通常按以下流程配合：
+
+- 训练阶段 (TensorFlow): 你使用 TensorFlow 训练一个深度学习模型（例如：识别手掌的模型）。
+- 转换阶段 (TFLite): 将该模型转换为 TensorFlow Lite 格式（.tflite），以便在移动设备上高效运行。
+- 部署阶段 (MediaPipe):
+  - MediaPipe 接收摄像头的视频流。
+  - 预处理：MediaPipe 将图像裁剪、旋转、归一化（变成模型能看懂的数据）。
+  - 推理 (调用 TF)：MediaPipe 内部有一个组件（InferenceCalculator），它会调用 TensorFlow Lite 来运行刚才训练好的模型，得到原始输出（如坐标点）。
+  - 后处理：MediaPipe 将模型输出的坐标点映射回屏幕坐标，并进行平滑处理（避免抖动）。
+  - 渲染：在屏幕上画出骨骼或关键点。
+
+## 3. 图解类比
+
+形象的比喻：
+
+- TensorFlow 是发动机：它提供动力（智能），但光有一个发动机，你无法上路行驶。
+- MediaPipe 是汽车底盘和传动系统：它连接发动机（模型），装上轮子（输入输出），接上方向盘（控制逻辑），让发动机的动力能真正应用在路上（实际场景）。
+
+## 4. 为什么只用 TensorFlow 不够？
+
+如果你想在手机上做一个“实时手势控制”的 App，只用 TensorFlow 会遇到很多麻烦：
+
+- 繁琐的预处理：你必须自己写代码来处理摄像头的每一帧（YUV 转 RGB、旋转、缩放）。
+- 复杂的逻辑：比如“手部追踪”，通常涉及两个模型：一个先检测手在哪里（检测模型），另一个在检测到的区域内找关键点（地标模型）。你需要自己写代码来协调这两个模型的切换（例如：只有当手跟丢了，才重新运行检测模型）。
+- 跨平台难：在 Android 上写一套 Java/Kotlin 代码，在 iOS 上又得重写一套 Objective-C/Swift 代码。
+- MediaPipe 解决了这些问题：它内置了这些复杂的逻辑（称为 MediaPipe Graph），并提供跨平台的 C++ 核心，让你在不同平台上只需写少量代码。
+
+## 5. 总结对比表
+
+| 特性     | TensorFlow / TF Lite         | MediaPipe                            |
+| -------- | ---------------------------- | ------------------------------------ |
+| 主要功能 | 数学运算、模型训练、模型推理 | 视频/音频流处理、逻辑编排            |
+| 处理对象 | 张量 (Tensors/Numbers)       | 媒体流 (Frames/Audio buffers)        |
+| 典型输出 | 概率值、原始坐标数组         | 结构化数据 (Landmarks)、渲染好的图像 |
+| 开发阶段 | 研究与训练阶段               | 产品化与部署阶段                     |
+| 底层关系 | 被调用方                     | 调用方 (MediaPipe 通常封装了 TFLite) |
+
+## 6.结论
+
+MediaPipe 是基于 TensorFlow (特别是 TensorFlow Lite) 之上构建的高层框架。没有 TensorFlow，MediaPipe 里的很多 AI 功能无法运行；但没有 MediaPipe，TensorFlow 的模型很难直接变成一个流畅的、跨平台的视频流应用。

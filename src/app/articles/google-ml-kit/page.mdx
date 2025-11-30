@@ -1,0 +1,126 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-11-30',
+  title: "Google's ML Kit for Flutter",
+  description: "Introduction to Google's ML Kit for mobile developers.",
+  tags: ['Flutter', 'Google', 'Machine Learning'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Google 的 ML Kit 是专门为移动端（Android 和 iOS）设计的机器学习 SDK。它的最大特点是完全在端侧（On-device）运行，这意味着它不需要联网，速度快，免费，且保护用户隐私。
+
+为了方便理解，我们可以将 ML Kit 的功能模块分为两大类：
+
+- 视觉（Vision）
+- 语言（Natural Language）
+
+以下是每个模块的详细功能介绍及其典型应用场景：
+
+## 视觉类 API (Vision APIs)
+
+处理图片、视频流，让 App“看懂”世界。
+
+### 1. 🔍 条形码扫描 (Barcode Scanning)
+
+- `功能：`识别和解析大多数标准格式的条形码和二维码（如 QR Code, EAN-13, UPC）。不仅仅是读取，它还能自动解析二维码里的结构化数据（如 WiFi 配置、联系人 vCard、日历事件），而不需要你手动去解析字符串。
+- `场景：`扫码支付、扫码连 WiFi、商品比价、包裹追踪。
+
+### 2. 😊 人脸检测 (Face Detection)
+
+- `功能：`检测图片或视频中是否存在人脸，以及人脸的位置。
+
+- `详细能力：`
+  - `轮廓点：`获得眼睛、耳朵、鼻子、嘴巴的坐标。
+  - `分类：`眼睛是否睁开？是否在微笑？（概率值）。
+  - `追踪：`给每个人脸分配一个 ID，在视频流中追踪同一个人。
+    `注意：`它是检测（Detection）而不是识别（Recognition）。它能告诉你“这里有个人脸，他在笑”，但不能告诉你“这人是张三”。
+- `场景：`自动对焦、美颜相机、人脸贴纸、检测用户是否注视屏幕。
+
+### 3. 🕸️ 人脸网格检测 (Face Mesh Detection)
+
+- `功能：`比普通人脸检测更精细。它能生成人脸的 468 个 3D 坐标点。
+- `场景：`AR 特效（像 Snapchat/抖音的滤镜）、精确的面部动作捕捉、虚拟试妆。
+
+### 4. 📄 文本识别 (Text Recognition / OCR)
+
+- `功能：`也就是 OCR。识别图片中的文字（支持中文、英文、日文、韩文等多种语言）。
+- `版本：`分为 V1（传统）和 V2（基于更现代的深度学习，支持更多语言，准确率更高）。
+- `场景：`扫描信用卡、把纸质文档转为电子版、拍照翻译、车牌识别。
+
+### 5. 🧘 姿态检测 (Pose Detection)
+
+- `功能：`检测人体的 33 个关键骨骼点（包括手腕、脚踝、膝盖、肩膀、眼睛等）。
+- `能力：`可以全图检测，也可以实时追踪视频流。支持“快速模式”和“高精度模式”。
+- `场景：`健身 App（AI 教练纠正动作）、瑜伽辅助、体感游戏、手势控制（粗略）。
+
+### 6. 🖼️ 图像标签 (Image Labeling)
+
+- `功能：`识别图片里“有什么”。它会返回一堆标签和置信度。
+- `例子：`输入一张公园的照片，它会返回：["Tree": 0.9, "Grass": 0.8, "Dog": 0.7]。
+- `场景：`智能相册分类（自动把有猫的照片分一组）、内容审核。
+
+### 7. 📦 物体检测与追踪 (Object Detection and Tracking)
+
+- `功能：`在图片中框出主要的物体，并告诉你是哪类物体（主要分为：时尚品、食品、植物、地点、家居用品）。
+- `追踪：`在视频中，如果物体移动，ID 保持不变。
+- `场景：`视觉搜索（拍立淘）、电商 App 里的商品识别。
+
+### 8. 🤳 自拍分割 (Selfie Segmentation) / 主体分割
+
+- `功能：`也就是“抠图”。将图片中的“人物”和“背景”分离开。
+- `场景：`视频会议的“虚拟背景”（背景虚化或换背景）、照片编辑。
+
+### 9. 🖋️ 数字墨水识别 (Digital Ink Recognition)
+
+- `功能：`识别手写轨迹。不仅仅是 OCR，而是根据用户在触摸屏上书写的笔画顺序来识别文字或形状。
+- `场景：`手写输入法、笔记 App 里的手写转文字、画图修正。
+
+## 二、语言类 API (Natural Language APIs)
+
+处理文字，让 App“读懂”意思。
+
+### 1. 🆔 语言识别 (Language Identification)
+
+- `功能：`给它一段话，它告诉你这是什么语言（例如：en 是英语，zh 是中文）。
+- `场景：`自动检测用户输入的语言以切换翻译引擎。
+
+### 2. 🔁 翻译 (On-device Translation)
+
+- `功能：`在没有网络的情况下，在不同语言之间互译。
+- `场景：`离线翻译 App、聊天应用中的即时翻译。
+
+### 3. 💬 智能回复 (Smart Reply)
+
+- `功能：`根据收到的消息，自动建议 3 条快捷回复。
+- `例子：`收到 "Do you want to grab lunch?" -> 建议 "Sure!", "What time?", "No thanks."
+- `场景：`聊天 App、邮件客户端。
+
+### 4. 📝 实体提取 (Entity Extraction)
+
+- `功能：`从一段长文本中，提取出有用的结构化信息。
+- `提取内容：`电话号码、地址、电子邮件、追踪单号、日期时间、航班号等。
+- `场景：`聊天中点击电话号码直接拨打、点击地址直接跳转地图。
+
+## 三、总结：在 Flutter 中如何选择？
+
+在 Flutter 中，这些模块被拆分成了不同的包，以免你的 App 体积过大。你不需要引入所有功能，按需引入即可。
+
+这些包通常由 google_ml_kit（社区维护的封装库，虽然不是 Google 官方写的 Dart 代码，但底层直接调用官方 Native SDK，是目前的标准做法）提供。
+
+| ML Kit 模块             | Flutter 推荐插件包名          |
+| ----------------------- | ----------------------------- |
+| 基础总包 (不推荐直接用) | google_ml_kit                 |
+| 条形码扫描              | google_mlkit_barcode_scanning |
+| 人脸检测                | google_mlkit_face_detection   |
+| 文本识别 (OCR)          | google_mlkit_text_recognition |
+| 姿态检测                | google_mlkit_pose_detection   |
+| 翻译                    | google_mlkit_translation      |
+| 图像标签                | google_mlkit_image_labeling   |
