@@ -39,9 +39,9 @@ export async function getAllMdx({ path, tag }: { path: string, tag?: string }) {
 }
 
 export async function getAllArticles({ tag }: { tag?: string }) {
-    return getAllMdx({ path: 'articles', tag })
+    return await getAllMdx({ path: 'articles', tag })
 }
 
 export async function getAllLife({ tag }: { tag?: string }) {
-    return getAllMdx({ path: 'life', tag })
+    return await getAllMdx({ path: 'life', tag })
 }

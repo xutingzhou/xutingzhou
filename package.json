@@ -5,7 +5,9 @@
     "scripts": {
         "prebuild": "bun scripts/buildSearchIndex.js",
         "dev": "next dev --webpack",
-        "build": "next build --webpack"
+        "build": "next build --webpack",
+        "start": "next start",
+        "lint": "next lint"
     },
     "browserslist": "defaults, not ie <= 11",
     "dependencies": {
@@ -37,7 +39,7 @@
         "typescript": "^5.8.3"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.3.8",
+        "@biomejs/biome": "2.3.5",
         "@types/node": "^24.1.0",
         "@types/react": "^19",
         "@types/react-dom": "^19",
@@ -45,6 +47,6 @@
         "eslint-config-next": "^16",
         "prettier": "^3.6.2",
         "prettier-plugin-tailwindcss": "^0.7.1",
-        "sharp": "0.34.5"
+        "sharp": "0.34.3"
     }
 }
