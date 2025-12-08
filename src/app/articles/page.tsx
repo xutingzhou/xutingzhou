@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default async function ArticlesIndex({ searchParams }: { searchParams: Promise<{ tag?: string; page?: string }> }) {
     const { tag, page } = await searchParams
     const articles = await getAllArticles({ tag })
+    console.log('ArticlesIndex articles:', articles.length)
 
     const pageSize = 10
     const currentPage = Number(page || "1")
@@ -26,7 +27,7 @@ export default async function ArticlesIndex({ searchParams }: { searchParams: Pr
 
     return (
         <SimpleLayout
-            title="不患人之不能，而患己之不勉。"
+            title={`不患人之不能，而患己之不勉。${articles.length}`}
             intro="All of my thoughts on programming, learning, and more."
         >
             <div className="flex flex-col min-h-[60vh]">
