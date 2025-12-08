@@ -4,18 +4,14 @@
     "private": true,
     "scripts": {
         "prebuild": "bun scripts/buildSearchIndex.js",
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
+        "dev": "next dev --webpack",
+        "build": "next build --webpack"
     },
     "browserslist": "defaults, not ie <= 11",
     "dependencies": {
         "@headlessui/react": "^2.2.9",
-        "@mapbox/rehype-prism": "^0.9.0",
         "@mdx-js/loader": "^3.1.1",
         "@mdx-js/react": "^3.1.0",
-        "@next/mdx": "^16",
         "@nivo/core": "^0.99.0",
         "@nivo/line": "^0.99.0",
         "@phosphor-icons/react": "^2.1.10",
@@ -34,6 +30,7 @@
         "next-themes": "^0.4.6",
         "react": "^19",
         "react-dom": "^19",
+        "rehype-prism-plus": "^2.0.1",
         "remark-gfm": "^4.0.1",
         "tailwind-merge": "^3.4.0",
         "tailwindcss": "^4.1.11",
