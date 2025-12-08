@@ -40,7 +40,7 @@
         "typescript": "^5.8.3"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.3.5",
+        "@biomejs/biome": "2.3.8",
         "@types/node": "^24.1.0",
         "@types/react": "^19",
         "@types/react-dom": "^19",
