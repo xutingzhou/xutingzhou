@@ -1,0 +1,35 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { YouTubeLite } from '@/components/YouTubeLite'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-12-11',
+  title: 'Building the PERFECT Linux PC',
+  description: 'Watch the video "Building the PERFECT Linux PC with Linus Torvalds" on YouTube',
+  tags: ['Video', 'Linux', 'PC Building'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+## Video: Building the PERFECT Linux PC with Linus Torvalds
+
+<YouTubeLite videoId="mfv0V1SxbNA" />
+
+## Hardware List
+
+| Component | Model                  | 
+| -------- | ----------------------- | 
+| CPU | AMD Ryzen Threadripper 9960X|
+|	Motherboard |GIGABYTE TRX50 AERO D|
+|	RAM | Kingston FURY Renegade Pro DDR5 ECC 6400 MT/s CL32|
+|	GPU | Intel Arc B580|
+|	SSD | Samsung SSD 9100 PRO 2TB|
+|	Cooler| Noctua NH-U14S TR5-SP6|
+|	Case | Fractal Design Torrent E-ATX|
+|	PSU |Seasonic PRIME TX-1600 1600W 80+ Titanium|
