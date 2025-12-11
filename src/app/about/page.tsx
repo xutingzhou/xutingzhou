@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import { SocialLinkWithText } from '@/components/SocialLink'
 import { socialLinks } from '@/constant/socialLinks'
 import portraitImage from '@/images/portrait.jpg'
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About',

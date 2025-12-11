@@ -12,16 +12,16 @@ export function Pagination({
 }
 
 export function PaginationPrevious({
-    href = null,
     className,
     children = 'Previous',
+    onClick
 }: React.PropsWithChildren<{
-    href?: string | null
     className?: string
+    onClick?: () => void
 }>) {
     return (
         <span className={cn(className, 'grow basis-0')}>
-            <Button className="flex items-center" {...(href === null ? { disabled: true } : { href })} plain aria-label="Previous page">
+            <Button className="flex items-center" plain aria-label="Previous page" onClick={onClick} disabled={!onClick}>
                 <CaretLeftIcon size={18} />
                 {children}
             </Button>
@@ -30,16 +30,16 @@ export function PaginationPrevious({
 }
 
 export function PaginationNext({
-    href = null,
     className,
     children = 'Next',
+    onClick
 }: React.PropsWithChildren<{
-    href?: string | null
     className?: string
+    onClick?: () => void
 }>) {
     return (
         <span className={cn(className, 'flex grow basis-0 justify-end')}>
-            <Button className="flex items-center" {...(href === null ? { disabled: true } : { href })} plain aria-label="Next page">
+            <Button className="flex items-center" plain aria-label="Next page" onClick={onClick} disabled={!onClick}>
                 {children}
                 <CaretRightIcon size={18} />
             </Button>
@@ -52,18 +52,17 @@ export function PaginationList({ className, ...props }: React.ComponentPropsWith
 }
 
 export function PaginationPage({
-    href,
     className,
     current = false,
     children,
+    onClick,
 }: React.PropsWithChildren<{
-    href: string
     className?: string
     current?: boolean
+    onClick?: () => void
 }>) {
     return (
         <Button
-            href={href}
             plain
             aria-label={`Page ${children}`}
             aria-current={current ? 'page' : undefined}
@@ -72,6 +71,8 @@ export function PaginationPage({
                 'min-w-9 before:absolute before:-inset-px before:rounded-lg',
                 current && 'before:bg-zinc-950/5 dark:before:bg-white/10'
             )}
+            disabled={current}
+            onClick={onClick}
         >
             <span className="-mx-0.5">{children}</span>
         </Button>
