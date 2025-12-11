@@ -204,6 +204,7 @@ function Avatar({
             href="/"
             aria-label="Home"
             className={cn(className, 'pointer-events-auto')}
+            rel="preload"
             {...props}
         >
             <Image
