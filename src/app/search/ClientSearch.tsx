@@ -18,6 +18,11 @@ export default function ClientSearch() {
                 const fuseInstance = new Fuse<ArticleWithSlug>(docs, {
                     keys: ["title", "description", "tags"],
                     threshold: 0.3,
+                    sortFn: (a, b) => {
+                        if (a.item.date > b.item.date) return 1
+                        if (a.item.date < b.item.date) return -1
+                        return 0
+                    }
                 })
                 setFuse(fuseInstance)
             })
