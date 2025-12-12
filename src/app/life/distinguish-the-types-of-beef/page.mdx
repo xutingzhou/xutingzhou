@@ -1,0 +1,32 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { Bilibili } from '@/components/Bilibili'
+import Image from 'next/image'
+import distinguishTheTypesOfBeef from './distinguish-the-types-of-beef.jpg'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2025-12-12',
+  title: '区分牛肉的类别',
+  description: '看 B 站视频，了解如何区分不同类别的牛肉',
+  tags: ['Video', 'Beef', 'Cooking'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+## Video: 花 6w 块，拆解一头牛的 35 个部位，每个部位都适合做什么菜，一个视频讲清楚！
+
+<Bilibili videoId="BV1YXm4BUEeX" />
+
+## 总结
+
+1. 纤维越细的越嫩
+2. 脂肪越多的越香
+3. 肉越懒越贵
+
+<Image src={distinguishTheTypesOfBeef} alt="" />

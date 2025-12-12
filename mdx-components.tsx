@@ -1,3 +1,4 @@
+import { Bilibili } from '@/components/Bilibili'
 import { YouTubeLite } from '@/components/YouTubeLite'
 import type { MDXComponents } from 'mdx/types'
 import Image, { type ImageProps } from 'next/image'
@@ -7,5 +8,6 @@ export function useMDXComponents(components: MDXComponents) {
     ...components,
     Image: (props: ImageProps) => <Image {...props} />,
     YouTubeLite: (videoId: string) => <YouTubeLite videoId={videoId} />,
+    Bilibili: (videoId: string) => <Bilibili videoId={videoId} />,
   }
 }
