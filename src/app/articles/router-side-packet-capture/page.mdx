@@ -1,0 +1,88 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import routerSidePacketCapture00 from './router-side-packet-capture-0.jpg'
+import routerSidePacketCapture01 from './router-side-packet-capture-1.jpg'
+import routerSidePacketCapture02 from './router-side-packet-capture-1.jpg'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2026-01-12',
+  title: '在路由器端抓包',
+  description: '使用路由器端抓包工具进行网络数据包的捕获与分析。',
+  tags: ['Capture', 'Network'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+在路由器端抓包（Router-side Packet Capture）是网络分析的“上帝视角”，它可以让你在不触动手机或电脑的情况下，监控整个局域网内所有设备的流量。这在分析加密程度高、无法 Root 或安装证书的应用（如智能家居设备、电视盒、部分金融 App）时非常有效。
+
+## 路由器抓包方案
+
+| 方案      |	适用设备             |	优点	                    | 缺点                  |
+| --------- | ------------------- | -------------------------- | ---------------------- |
+|后台自带  	|H3C/TP-Link 等	      | 无需技术背景，操作极简	      | 功能有限，无法实时查看  |
+|Wireshark |SSHdump	OpenWrt/UniFi	| 最推荐，实时分析，界面友好	  | 需要路由器开启 SSH 权限 |
+|端口镜像	  | 管理型交换机	        | 硬件级不掉包，不占路由器 CPU	| 需要额外的硬件支持     |
+|eBPF 抓包	| 高端定制 Linux 路由 	| 极低延迟，支持深入内核层分析	| 部署复杂，需要较新内核 |
+
+选择 Wireshark，通过 SSH 连接到路由器，在路由器端运行 tcpdump，并将实时流量直接通过管道传回你的电脑。
+
+## 我的路由器是 Asuswrt-Merlin (梅林固件)
+
+在 Asuswrt-Merlin（梅林固件）中，由于系统分区是只读的，opkg 不是内置命令，它属于 Entware 环境。要实现 Wireshark SSHdump，你需要按照以下步骤配置：
+
+### 1. 准备 U 盘并安装 Entware
+
+梅林固件安装软件包必须依赖外部存储（U 盘或移动硬盘）。
+
+插入 U 盘：建议格式化为 Ext4（推荐）。
+
+<Image src={routerSidePacketCapture00} alt="" />
+
+进入 SSH 执行 amtm：梅林固件内置了 amtm（终端管理菜单），这是安装 Entware 最简单的方法。
+
+```bash
+amtm
+```
+
+安装 Entware：
+- 在菜单中输入 ep (Entware) 并回车。
+- 按照提示选择你的 U 盘分区进行安装。
+- 安装完成后，系统会自动配置好路径，此时 opkg 命令就可用了。
+
+<Image src={routerSidePacketCapture01} alt="" />1
+
+### 2. 安装 tcpdump
+
+```bash
+opkg update
+opkg install tcpdump
+```
+
+**注意：安装后的路径通常在 /opt/sbin/tcpdump。**
+
+<Image src={routerSidePacketCapture02} alt="" />1
+
+### 3. 配置 Wireshark SSHdump
+
+打开 Wireshark，找到 SSH remote capture: sshdump，点击旁边的齿轮。
+
+- Server 选项卡：
+  - Remote SSH server address: 路由器 IP (如 192.168.50.1)。
+  - Port: 默认 22（如果你在梅林后台改了 SSH 端口，请填入对应的）。
+
+- Authentication 选项卡：
+  - 填入路由器的登录账号（通常是 admin）和密码。
+
+- Capture 选项卡：
+
+  - Remote interface: 填入 br0 (代表局域网桥接接口) 或 eth0 (通常是 WAN 口)。
+  - Remote capture binary: 非常关键！必须填入全路径： /opt/sbin/tcpdump
+  - Remote capture command: /opt/sbin/tcpdump -i br0 -U -s0 -w -
+
+点击 Start。
