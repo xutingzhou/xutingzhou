@@ -1,0 +1,124 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2026-05-02',
+  title: '在 WSL 中设置 Expo 开发环境',
+  description: '在 Windows 子系统 Linux (WSL) 中设置 Expo 开发环境的详细指南。',
+  tags: ['Expo', 'WSL', 'Development'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+在 Windows 子系统 Linux (WSL) 中设置 Expo 开发环境可以让你在 Windows 上享受 Linux 的开发体验，同时利用 Expo 的强大功能进行 React Native 开发。
+
+原因：
+1. Unsupported platform, macOS or Linux is required to build apps for Android
+2. 我的 Mac 内存有点小
+
+WSL 可以当作一个 Linux 电脑来使用，只是在连接手机测试时，需要一些额外的配置。让我们开始吧。
+
+## 1. 安装 WSL 和 Linux 发行版
+
+在 Windows 上安装 WSL 和 Linux 发行版（如 Ubuntu）。通过微软的 Store，很方便的安装各种 Linux 发行版。
+
+## 2. 安装 Node.js 和 npm
+
+安装 nvm，使用 nvm 管理 Node.js：
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 24
+```
+
+## 3. 安装 JDK
+
+*安装 JDK17，避免一些奇奇怪怪的问题*
+
+我安装的是 [Eclipse Temurin](https://adoptium.net/zh-CN/installation)
+
+## 4. 安装 Expo CLI
+
+https://docs.expo.dev/eas/cli/
+
+```bash
+bun add -g eas-cli
+```
+
+项目是用 bun 管理的，所有就都用 bun 了
+
+## 5. 设置 1Password SSH agent
+
+我使用 1Password 来管理 SSH 密钥，就需要在 WSL 中设置一下，参考[Use the 1Password SSH agent with WSL](https://developer.1password.com/docs/ssh/integrations/wsl/)
+
+## 6. Android SDK
+
+思路是这样的，build 的工具都用 wsl 本地的，adb、模拟器都用 Windows 上的
+
+- 只需要安装 command line tools 就行，不需要安装 Android Studio。[官网](https://developer.android.com/studio?hl=zh-cn#command-tools)
+
+  ```shell
+  mkdir -p ~/Android/Sdk
+  ~/Android/Sdk/cmdline-tools/latest
+  ```
+
+- 配置环境变量
+
+  ```bash
+  export ANDROID_HOME=$HOME/Android/Sdk
+  export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+  ```
+
+- 安装平台工具和构建工具
+
+  ```bash
+  sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+  ```
+
+- 用 Windows 的 adb
+
+    在 WSL 中
+      ```bash
+      export ADB_SERVER_SOCKET=tcp:127.0.0.1:5037
+      # Windows 上的 adb 路径
+      alias adb="/mnt/c/Users/你的用户名/AppData/Local/Android/Sdk/platform-tools/adb.exe"
+      ```
+
+    问题 1 ***cannot execute binary file: Exec format error***
+
+      在/etc/wsl.conf 中添加：
+
+      ```ini
+      [interop]
+      enabled=true
+      appendWindowsPath=true
+      ```
+
+      然后重启 WSL，wsl --shutdown
+
+    问题 2 ***spawn /home/xutingzhou/Android/Sdk/platform-tools/adb ENOENT****
+
+    伪造 adb 路径
+
+    - 创建一个“代理 adb”：
+      ```bash
+      mkdir -p ~/Android/Sdk/platform-tools
+      nano ~/Android/Sdk/platform-tools/adb
+      ```
+
+    - 写入：
+      ```bash
+      #!/bin/bash
+      /mnt/c/Users/你的用户名/AppData/Local/Android/Sdk/platform-tools/adb.exe "$@"
+      ```
+
+    - 保存后：
+      ```bash
+      chmod +x ~/Android/Sdk/platform-tools/adb
+      ```
