@@ -1,0 +1,151 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jimmy Xu',
+  date: '2026-05-17',
+  title: 'nginx 反向代理鉴权',
+  description:
+    '学习 nginx 反向代理鉴权的配置与实现方法。',
+  tags: ['Learning'],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 什么是 nginx 反向代理鉴权
+
+nginx 反向代理鉴权是一种通过 nginx 配置来控制对后端服务的访问权限的方法。它通常用于在请求到达后端应用之前进行身份验证和授权。
+
+非常时候现在正在做的企业文档功能。
+
+## 流程
+
+```
+Browser
+   ↓
+Nginx
+   ↓
+/auth/check
+   ↓
+通过
+   ↓
+Docusaurus
+```
+
+## 步骤
+
+### 1. 后台接口增加鉴权 API
+
+https://api.xxx.com/auth/docs
+
+验证成功返回 200，失败 401
+
+```typescript
+app.get('/auth/docs', async (c) => {
+  const token = getCookie(c, 'token')
+
+  if (!token) {
+    return c.text('Unauthorized', 401)
+  }
+
+  const user = await verifyToken(token)
+
+  if (!user) {
+    return c.text('Unauthorized', 401)
+  }
+
+  return c.text('OK', 200)
+})
+```
+
+### 2. nginx 配置
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name docs.xxx.com;
+
+    ssl_certificate /root/.acme.sh/*.xxx.com_ecc/fullchain.cer;
+    ssl_certificate_key /root/.acme.sh/*.xxx.com_ecc/*.xxx.com.key;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    location / {
+
+        # 先鉴权
+        auth_request /_auth;
+
+        # 鉴权失败跳转登录
+        error_page 401 = @login;
+
+        proxy_pass http://127.0.0.1:3001;
+
+        proxy_http_version 1.1;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # 内部鉴权请求
+    location = /_auth {
+        internal;
+
+        proxy_pass https://api.xxx.com/auth/docs;
+
+        proxy_pass_request_body off;
+
+        proxy_set_header Content-Length "";
+
+        # 转发 cookie
+        proxy_set_header Cookie $http_cookie;
+
+        # 转发用户信息
+        proxy_set_header X-Original-URI $request_uri;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # 未登录跳转
+    location @login {
+        return 302 https://www.xxx.com/login;
+    }
+}
+```
+
+  - auth_request: 每次请求 docs 前，先请求 /_auth
+  - _auth: 内部请求，转发到后端鉴权接口，返回 200 或 401
+  - internal: 只能内部请求，外部无法直接访问
+  - proxy_pass_request_body off: 不转发 body，节省带宽，性能更好
+  - proxy_set_header Cookie: 转发浏览器的 cookie 到后端鉴权接口
+
+### 3. 登录状态共享
+
+Cookie 必须是整个 domain 共享的，才能在 docs.xxx.com 和 api.xxx.com 之间共享登录状态。
+
+```typescript
+setCookie(c, 'token', token, {
+  domain: '.xxx.com',
+  path: '/',
+  httpOnly: true,
+  secure: true,
+  sameSite: 'Lax',
+})
+```
+
+### 4. 推荐生产环境增强配置
+
+```nginx
+# 防止缓存泄露
+add_header Cache-Control "private, no-store";
+
+# 防止 iframe
+add_header X-Frame-Options SAMEORIGIN;
+
+# CSP
+add_header Content-Security-Policy "default-src 'self'";
+```
