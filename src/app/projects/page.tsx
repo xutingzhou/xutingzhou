@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import goholidaytoday from '@/images/logos/goholidaytoday.png'
+import lightops from '@/images/logos/lightops.png'
 import { LinkIcon } from '@phosphor-icons/react/dist/ssr'
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
 const projects = [
     {
@@ -13,6 +13,13 @@ const projects = [
             '让每一段旅程，都值得被铭记。',
         link: { href: 'https://www.goholidaytoday.com/', label: 'goholidaytoday.com' },
         logo: goholidaytoday,
+    },
+    {
+        name: '智慧路灯运维平台',
+        description:
+            '让城市照明运维更简单、更智能',
+        link: { href: 'https://www.hyxjz.cn/', label: 'hyxjz.cn' },
+        logo: lightops,
     },
 ]
 
